@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Sciendo.Core.Providers.DataTypes;
 
 namespace Simulation.UI.Models
 {
     public class WeekSelectionModel
     {
 
-        public WeekSelectionModel(string typeOfSelection)
+        public WeekSelectionModel(ItemType itemType)
         {
-            TypeOfSelection  = typeOfSelection;
+            ItemType  = itemType;
         }
         public IEnumerable<Week> AvailableWeeks { get; set; }
 
-        public WeeklyTopModel FirstWeekTop { get; set; }
+        public WeeklyTop FirstWeekTop { get; set; }
 
-        public string TypeOfSelection { get; set; }
+        public ItemType ItemType { get; set; }
 
         public int NextWeekToProcess { get; set; }
 

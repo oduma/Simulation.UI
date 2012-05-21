@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Simulation.UI.Models;
+using Sciendo.Core.Providers;
+using Sciendo.Core;
+using Sciendo.Core.Providers.DataTypes;
 
 namespace Simulation.UI.Controllers
 {
@@ -25,7 +28,11 @@ namespace Simulation.UI.Controllers
         //[AcceptVerbs(HttpVerbs.Get)]
         public ActionResult AddToTotals(string id)
         {
-            TopForTotalModel topForTotalModel = new TopForTotalModel()
+            ItemType currentItemType;
+            if(!Enum.TryParse<ItemType>(id,true,out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+
+            WeeklyTop topForTotalModel = new WeeklyTop()
             {
                 WeekNo = Convert.ToInt32(Request.Form["WeekNo"])
             };
@@ -33,14 +40,16 @@ namespace Simulation.UI.Controllers
             var topItems = new List<TopItem>();
             for (int i = 0; i < noOfItems; i++)
             {
-                topItems.Add(new TopItem { ItemName = Request.Form[string.Format("TopItems[{0}][ItemName]", i)], Rank = Convert.ToInt32(Request.Form[string.Format("TopItems[{0}][Rank]", i)]) });
+                topItems.Add(
+                    new TopItem { ItemName = Request.Form[string.Format("TopItems[{0}][ItemName]", i)], 
+                    Rank = Convert.ToInt32(Request.Form[string.Format("TopItems[{0}][Rank]", i)]),ItemType= currentItemType});
             }
             topForTotalModel.TopItems = topItems;
 
             TotalsAfterWeek totalsAfterWeek = new TotalsAfterWeek();
-            ITopTotalsProvider topTotalsProvider = new DummyTopTotalsProvider();
-            topTotalsProvider.SaveTotalForItems(topForTotalModel, id,HttpContext);
-            totalsAfterWeek.TotalItems = topTotalsProvider.GetTotalItems(id, HttpContext);
+            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            topTotalsProvider.SaveTotalForItems(topForTotalModel);
+            totalsAfterWeek.TopItems = topTotalsProvider.GetTotalItems(currentItemType);
             totalsAfterWeek.WeekNo = topForTotalModel.WeekNo;
             return Json(totalsAfterWeek/*,JsonRequestBehavior.AllowGet*/);
         }
@@ -48,18 +57,26 @@ namespace Simulation.UI.Controllers
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult GetTotals(string id, string sidx, string sord, int? page, int? rows)
         {
-            ITopTotalsProvider topTotalsProvider = new DummyTopTotalsProvider();
-            return Json(topTotalsProvider.GetTotalItems(id,HttpContext), JsonRequestBehavior.AllowGet);
+            ItemType currentItemType;
+            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+
+            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            return Json(topTotalsProvider.GetTotalItems(currentItemType), JsonRequestBehavior.AllowGet);
 
         }
         public ActionResult WeekSelection(string id)
         {
-            WeekSelectionModel weekSelectionModel= new WeekSelectionModel(id);
+            ItemType currentItemType;
+            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+
+            WeekSelectionModel weekSelectionModel = new WeekSelectionModel(currentItemType);
             weekSelectionModel.AvailableWeeks = GetWeeks(DateTime.Now);
-            ITopRecordProvider topRecordProvider = new DummyTopRecordProvider();
-            weekSelectionModel.NextWeekToProcess = topRecordProvider.GetTopProcessed(HttpContext).Where(t => t.TypeOfSelection.ToLower() == weekSelectionModel.TypeOfSelection.ToLower()).Max(t => t.WeekNo) + 1;
-            ITopProvider topProvider = new DummyTopProvider();
-            weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, weekSelectionModel.TypeOfSelection, this.HttpContext);
+            ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
+            weekSelectionModel.NextWeekToProcess = topRecordProvider.GetTopProcessed().Where(t => t.ItemType == weekSelectionModel.ItemType).Max(t => t.WeekNo) + 1;
+            ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
+            weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, 10, weekSelectionModel.ItemType);
             return View(weekSelectionModel);
         }
 
@@ -84,22 +101,12 @@ namespace Simulation.UI.Controllers
                 endOfWeek = firstSundayOfTheYear.AddDays(6);
             }
         }
-        private IEnumerable<Week> GetWeeks()
-        {
-            return new List<Week> 
-            {
-                new Week{ WeekNo=1},
-                new Week {WeekNo=2},
-                new Week {WeekNo=3},
-                new Week {WeekNo=4}
-            };
-        }
 
         [AcceptVerbs(HttpVerbs.Get)]
-        public ActionResult Top(TopWeekRequest topWeekRequest)
+        public ActionResult Top(WeekSummary topWeekRequest)
         {
-            ITopProvider topProvider = new DummyTopProvider();
-            WeeklyTopModel weeklyTopModel = topProvider.GetTopByWeek(topWeekRequest.WeekNo,topWeekRequest.TypeOfSelection,HttpContext);
+            ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
+            WeeklyTop weeklyTopModel = topProvider.GetTopByWeek(topWeekRequest.WeekNo,10,topWeekRequest.ItemType);
             return Json(weeklyTopModel, JsonRequestBehavior.AllowGet);
         }
         

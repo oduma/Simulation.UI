@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Sciendo.Core.Providers.DataTypes;
 
 namespace Simulation.UI.Models
 {
@@ -9,6 +10,6 @@ namespace Simulation.UI.Models
     {
         public int WeekNo { get; set; }
 
-        public IEnumerable<TotalItem> TotalItems { get; set; }
+        public IEnumerable<TopItem> TopItems { get; set; }
     }
 }

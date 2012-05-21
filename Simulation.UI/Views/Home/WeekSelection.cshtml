@@ -1,6 +1,6 @@
 ﻿@model Simulation.UI.Models.WeekSelectionModel
 @{
-    ViewBag.Title = "Week Selection (" + Model.TypeOfSelection + ")";
+    ViewBag.Title = "Week Selection (" + Model.ItemType + ")";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -14,7 +14,7 @@
 <h2>Week Selection 
 <span class="typeSelector">
     <a href="@Url.Action("WeekSelection","Home",new {@id="Artist"})">
-        @if (Model.TypeOfSelection == "Artist")
+        @if (Model.ItemType == Sciendo.Core.Providers.DataTypes.ItemType.Artist)
         {
         <span class="selected">Artists</span>
         }
@@ -26,7 +26,7 @@
     </span>
 <span class="typeSelector">
  <a href="@Url.Action("WeekSelection", "Home", new { @id = "Track" })">
-        @if (Model.TypeOfSelection == "Track")
+        @if (Model.ItemType == Sciendo.Core.Providers.DataTypes.ItemType.Track)
         {
         <span class="selected">Tracks</span>
         }
@@ -37,7 +37,7 @@
  </a>
  </span>
  </h2>
-<input type="hidden" value="@Model.TypeOfSelection" id="typeOfSelection"/>
+<input type="hidden" value="@Model.ItemType" id="typeOfSelection"/>
 <input type="hidden" value="@Model.NextWeekToProcess" id="nextWeekToProcess" />
 <div id="availableWeeks">
     <label>Available Weeks:</label>
@@ -67,7 +67,7 @@
             <ul id="@string.Concat("TopWeek", week.WeekNo)">
             @if (week.WeekNo == Model.NextWeekToProcess)
             {
-                foreach (Simulation.UI.Models.TopItem topItem in Model.FirstWeekTop.TopItems)
+                foreach (Sciendo.Core.Providers.DataTypes.TopItem topItem in Model.FirstWeekTop.TopItems)
                 {
                     <li class="topItem" id="@string.Concat("li", week.WeekNo.ToString() + topItem.Rank.ToString())"><span>@topItem.Rank</span><span>@topItem.Position</span>
                     <span id="@string.Concat("w"+week.WeekNo, "i" + topItem.Rank)">@topItem.ItemName</span>
