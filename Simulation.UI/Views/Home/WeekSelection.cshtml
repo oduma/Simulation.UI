@@ -1,0 +1,88 @@
+﻿@model Simulation.UI.Models.WeekSelectionModel
+@{
+    ViewBag.Title = "Week Selection (" + Model.TypeOfSelection + ")";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header
+{
+        <link href="@Url.Content("~/Content/Grids/Css/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Content/Grids/Scripts/grid.locale-en.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Content/Grids/Scripts/jquery.jqGrid.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Custom/WeekSelection.js")" type="text/javascript"></script>
+}
+<h2>Week Selection 
+<span class="typeSelector">
+    <a href="@Url.Action("WeekSelection","Home",new {@id="Artist"})">
+        @if (Model.TypeOfSelection == "Artist")
+        {
+        <span class="selected">Artists</span>
+        }
+        else
+        {
+        <span class="unSelected">Artists</span>
+        }
+    </a>
+    </span>
+<span class="typeSelector">
+ <a href="@Url.Action("WeekSelection", "Home", new { @id = "Track" })">
+        @if (Model.TypeOfSelection == "Track")
+        {
+        <span class="selected">Tracks</span>
+        }
+        else
+        {
+        <span class="unSelected">Tracks</span>
+        }
+ </a>
+ </span>
+ </h2>
+<input type="hidden" value="@Model.TypeOfSelection" id="typeOfSelection"/>
+<input type="hidden" value="@Model.NextWeekToProcess" id="nextWeekToProcess" />
+<div id="availableWeeks">
+    <label>Available Weeks:</label>
+    <div id="accordion">
+    @foreach (Simulation.UI.Models.Week week in Model.AvailableWeeks)
+    {
+        <h3>
+            <a href="#">
+                <img class="week-image" src="@Url.Content("~/Content/images/" + @week.SeasonImage)" /><span class="weekTitle">Week: @week.WeekNo<span class="weekDetail">@week.DisplayValue</span></span>
+            </a>
+        </h3>
+        <div>
+        <div class="tall">
+            <span class="action" id="@string.Concat("action",week.WeekNo)">
+            @if (week.WeekNo == Model.NextWeekToProcess)
+            { 
+                if (Model.FirstWeekTop.TopProcessed)
+                { 
+                    <p>Processed</p>
+                }
+                else
+                {
+                    <input type="button" class="addToTotal" id="@string.Concat("addToTotal",@week.WeekNo)" value="Add to total"/>
+                }
+            }
+            </span>
+            <ul id="@string.Concat("TopWeek", week.WeekNo)">
+            @if (week.WeekNo == Model.NextWeekToProcess)
+            {
+                foreach (Simulation.UI.Models.TopItem topItem in Model.FirstWeekTop.TopItems)
+                {
+                    <li class="topItem" id="@string.Concat("li", week.WeekNo.ToString() + topItem.Rank.ToString())"><span>@topItem.Rank</span><span>@topItem.Position</span>
+                    <span id="@string.Concat("w"+week.WeekNo, "i" + topItem.Rank)">@topItem.ItemName</span>
+                    <span>(@topItem.NumberOfPlays)</span></li>     
+                }
+            }
+            </ul>
+        </div>
+        </div> 
+    }
+    </div>
+</div>
+
+<div id="totals" class="totals">
+Total
+<table id="totalsList"></table>
+<div id="totalspager"></div>
+</div>

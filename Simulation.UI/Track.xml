@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfTotalItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TotalItem>
+    <ItemName />
+    <Position>1</Position>
+    <Score>30</Score>
+    <EntryWeek>2</EntryWeek>
+  </TotalItem>
+  <TotalItem>
+    <ItemName>Track2</ItemName>
+    <Position>2</Position>
+    <Score>20</Score>
+    <EntryWeek>1</EntryWeek>
+  </TotalItem>
+  <TotalItem>
+    <ItemName>Track1</ItemName>
+    <Position>3</Position>
+    <Score>15</Score>
+    <EntryWeek>1</EntryWeek>
+  </TotalItem>
+  <TotalItem>
+    <ItemName>Track3</ItemName>
+    <Position>4</Position>
+    <Score>7</Score>
+    <EntryWeek>1</EntryWeek>
+  </TotalItem>
+</ArrayOfTotalItem>

@@ -1,0 +1,211 @@
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header,
+footer,
+nav,
+section {
+    display: block;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+#header
+{
+    background-color:#C9C9C9;
+    color:#EEEEEE;
+    font-size:large;
+    font-weight:bold;
+    padding: 10px;
+}
+
+#topOfPage
+{
+    border: dashed 1px #D8D8D8;
+    margin:10px;
+}
+
+#availableWeeks
+{
+    border:dashed 1px #E90000;
+    padding: 10px;
+    margin: 10 px;
+    width:30em;
+    float:left;
+}
+
+#availableWeeks label
+{
+    display:block;
+}
+
+#listWeeks
+{
+    border:1px solid #DADADA;
+    height:20em;
+    margin:2em 10px ;
+}
+
+#listWeeks option
+{
+    padding:2px 4px 2px 4px;
+    border:1px solid #0000E9;
+    margin:3px;
+}
+
+a 
+{
+    text-decoration:none;
+}
+.selected
+{
+    background-color:#EE99EE;
+    border:1px solid #000000;
+    padding: 1px 2px 1px 2px;
+    font-style:normal;
+    opacity:0.4;
+}
+
+.unSelected
+{
+    background-color:#EE99EE;
+    border:1px solid #000000;
+    padding: 1px 2px 1px 2px;
+    font-style:normal;
+    opacity:0.2;
+}
+
+.week-image
+{
+    display:run-in;
+    height:24px;
+    width:24px;
+    
+}
+.weekTitle
+{
+    margin:0 1.2em;
+    font-size:102%;
+    font-weight:bold;
+}
+
+.weekDetail
+{
+    padding:0 2 em;
+    font-size:82%;
+    font-weight:normal;
+    alignment-baseline:ideographic;
+    color:#BABABA;
+}
+.tall
+{
+    height:10em;
+}
+
+.tall .action
+{
+    display:block;
+    clear:left;
+    width:100%;
+    text-align:right;
+    font-size:82%;
+    opacity:0.4;
+}
+
+.topItem
+{
+    background-color:#EE99EE;
+    margin:0px 12px 4px 12px;
+    list-style-type:none;
+    padding:10px 10px 10px 10px;
+    opacity:0.4;
+}
+
+.topItem span
+{
+    margin:0px 10px;
+}
+
+.settings-area
+{
+    float:right;
+    display:inline;
+}
+.ui-menu
+{
+    width:200px;
+    position:absolute;
+}
+
+.totals
+{
+    border:dashed 1px #E90000;
+    padding: 10px;
+    margin: 10 px;
+    float:right;
+    display:inline;
+}
