@@ -209,3 +209,9 @@ a
     float:right;
     display:inline;
 }
+
+#settings
+{
+    float:right;
+    display:block;
+}

@@ -11,6 +11,11 @@
         <script src="@Url.Content("~/Content/Grids/Scripts/jquery.jqGrid.min.js")" type="text/javascript"></script>
         <script src="@Url.Content("~/Scripts/Custom/WeekSelection.js")" type="text/javascript"></script>
 }
+
+@section TopOfPage
+{
+    <input type="button" id="settings" value="Settings"/>
+}
 <h2>Week Selection 
 <span class="typeSelector">
     <a href="@Url.Action("WeekSelection","Home",new {@id="Artist"})">

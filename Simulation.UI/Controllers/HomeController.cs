@@ -25,7 +25,10 @@ namespace Simulation.UI.Controllers
             return View();
         }
 
-        //[AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult Settings(string id)
+        {
+            return View("Settings");
+        }
         public ActionResult AddToTotals(string id)
         {
             ItemType currentItemType;

@@ -52,6 +52,7 @@
     <Compile Include="Providers\DataTypes\TopItem.cs" />
     <Compile Include="Providers\DataTypes\WeeklyTop.cs" />
     <Compile Include="Providers\DataTypes\WeekSummary.cs" />
+    <Compile Include="Providers\IAlgorythmPoolProvider.cs" />
     <Compile Include="Providers\ITopProvider.cs" />
     <Compile Include="Providers\ITopRecordProvider.cs" />
     <Compile Include="Providers\ITopTotalsProvider.cs" />
