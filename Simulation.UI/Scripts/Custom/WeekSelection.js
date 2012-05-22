@@ -11,7 +11,7 @@ function addTotalsAgain(totalsAfterWeek)
 {
     $("#addToTotal" + totalsAfterWeek.WeekNo).remove();
     $("#action"+totalsAfterWeek.WeekNo).append("<p>Processed</p>");
-    getTotalsAgain(totalsAfterWeek.TotalItems);
+    getTotalsAgain(totalsAfterWeek.TopItems);
 }
 $(function () {
     $("#addToTotal"+$("#nextWeekToProcess").val()).click(function (event) {
@@ -94,7 +94,7 @@ $(function () {
             var nextWeek, data;
             nextWeek = ui.newHeader.text().substr(ui.newHeader.text().indexOf("Week: ") + 6, ui.newHeader.text().indexOf("(") - ui.newHeader.text().indexOf("Week: ") - 6);
             if ($("#TopWeek" + nextWeek + " li").length <= 0) {
-                data = { WeekNo: nextWeek, TypeOfSelection: $("#typeOfSelection").val() };
+                data = { WeekNo: nextWeek, ItemType: $("#typeOfSelection").val() };
                 $.getJSON("Top", data, printTop);
             }
         }

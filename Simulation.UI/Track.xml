@@ -1,27 +1,30 @@
 <?xml version="1.0"?>
-<ArrayOfTotalItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <TotalItem>
-    <ItemName />
+<ArrayOfTopItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TopItem>
+    <Rank>0</Rank>
     <Position>1</Position>
-    <Score>30</Score>
-    <EntryWeek>2</EntryWeek>
-  </TotalItem>
-  <TotalItem>
-    <ItemName>Track2</ItemName>
-    <Position>2</Position>
-    <Score>20</Score>
-    <EntryWeek>1</EntryWeek>
-  </TotalItem>
-  <TotalItem>
+    <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Track1</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>9</Score>
+    <EntryWeek>1</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>0</Rank>
+    <Position>2</Position>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Track2</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>6</Score>
+    <EntryWeek>1</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>0</Rank>
     <Position>3</Position>
-    <Score>15</Score>
-    <EntryWeek>1</EntryWeek>
-  </TotalItem>
-  <TotalItem>
+    <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Track3</ItemName>
-    <Position>4</Position>
-    <Score>7</Score>
+    <ItemType>Track</ItemType>
+    <Score>3</Score>
     <EntryWeek>1</EntryWeek>
-  </TotalItem>
-</ArrayOfTotalItem>
+  </TopItem>
+</ArrayOfTopItem>

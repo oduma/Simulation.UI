@@ -45,6 +45,7 @@ namespace Simulation.UI.Controllers
                     Rank = Convert.ToInt32(Request.Form[string.Format("TopItems[{0}][Rank]", i)]),ItemType= currentItemType});
             }
             topForTotalModel.TopItems = topItems;
+            topForTotalModel.ItemType = currentItemType;
 
             TotalsAfterWeek totalsAfterWeek = new TotalsAfterWeek();
             ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
@@ -74,7 +75,11 @@ namespace Simulation.UI.Controllers
             WeekSelectionModel weekSelectionModel = new WeekSelectionModel(currentItemType);
             weekSelectionModel.AvailableWeeks = GetWeeks(DateTime.Now);
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
-            weekSelectionModel.NextWeekToProcess = topRecordProvider.GetTopProcessed().Where(t => t.ItemType == weekSelectionModel.ItemType).Max(t => t.WeekNo) + 1;
+            var topProcessed = topRecordProvider.GetTopProcessed();
+            if (topProcessed.FirstOrDefault(p => p.ItemType == weekSelectionModel.ItemType) != null)
+                weekSelectionModel.NextWeekToProcess = topProcessed.Where(t => t.ItemType == weekSelectionModel.ItemType).Max(t => t.WeekNo) + 1;
+            else
+                weekSelectionModel.NextWeekToProcess = 1;
             ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
             weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, 10, weekSelectionModel.ItemType);
             return View(weekSelectionModel);

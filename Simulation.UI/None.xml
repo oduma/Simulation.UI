@@ -5,8 +5,8 @@
     <Position>1</Position>
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist1</ItemName>
-    <ItemType>Artist</ItemType>
-    <Score>9</Score>
+    <ItemType>None</ItemType>
+    <Score>12</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
   <TopItem>
@@ -14,8 +14,8 @@
     <Position>2</Position>
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist2</ItemName>
-    <ItemType>Artist</ItemType>
-    <Score>6</Score>
+    <ItemType>None</ItemType>
+    <Score>8</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
   <TopItem>
@@ -23,8 +23,8 @@
     <Position>3</Position>
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist3</ItemName>
-    <ItemType>Artist</ItemType>
-    <Score>3</Score>
+    <ItemType>None</ItemType>
+    <Score>4</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
 </ArrayOfTopItem>
