@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyAlgorythmPoolProvider.cs" />
     <Compile Include="DummyTopProvider.cs" />
     <Compile Include="DummyTopRecordProvider.cs" />
     <Compile Include="DummyTopTotalsProvider.cs" />

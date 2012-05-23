@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Simulation.UI.Models
+namespace Sciendo.Core.Providers.DataTypes
 {
     public class ScoreAlgorythm
     {
@@ -14,5 +14,7 @@ namespace Simulation.UI.Models
         public Func<int, int> ScoreRule { get; set; }
 
         public int NoOfItemsConsidered { get; set; }
+
+        public bool InUse { get; set; }
     }
 }

@@ -49,6 +49,8 @@
     <Compile Include="ClientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\DataTypes\ItemType.cs" />
+    <Compile Include="Providers\DataTypes\NewRule.cs" />
+    <Compile Include="Providers\DataTypes\ScoreAlgorythm.cs" />
     <Compile Include="Providers\DataTypes\TopItem.cs" />
     <Compile Include="Providers\DataTypes\WeeklyTop.cs" />
     <Compile Include="Providers\DataTypes\WeekSummary.cs" />

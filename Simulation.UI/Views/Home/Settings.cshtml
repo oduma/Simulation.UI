@@ -1,7 +1,19 @@
-﻿@
+﻿@model Simulation.UI.Models.SettingsModel
 @{
     ViewBag.Title = "Settings";
     Layout = "~/Views/Shared/_LayoutPopup.cshtml";
 }
+@section Header
+{
+        <script src="@Url.Content("~/Scripts/Custom/Settings.js")" type="text/javascript"></script>
+}
 
 <h2>Settings</h2>
+Use:
+<select id="rulesSelector">
+    @foreach (var alg in Model.ScoreAlgorythms)
+    {
+        <option value="@alg.Name" >@alg.Description</option> 
+    }
+</select>
+

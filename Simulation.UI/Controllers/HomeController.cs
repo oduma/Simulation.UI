@@ -27,7 +27,25 @@ namespace Simulation.UI.Controllers
 
         public ActionResult Settings(string id)
         {
-            return View("Settings");
+            ItemType currentItemType;
+            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+            IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+            var model = new SettingsModel();
+            model.ScoreAlgorythms = algorythmPoolProvider.GetAvailableScoreAlgorythms(currentItemType);
+            return View("Settings", model);
+        }
+
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult ChangeRules(string id, string ruleName)
+        {
+            ItemType currentItemType;
+            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+            NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
+            IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+            
+            return Json(alg.SetRule(rule), JsonRequestBehavior.AllowGet);
         }
         public ActionResult AddToTotals(string id)
         {
