@@ -74,35 +74,35 @@ namespace Simulation.DummyDataProvider
 
         private string GetCurrentlyInUse(ItemType itemType)
         {
-            var settings=GetAllRulesUsed();
-            return (settings.ContainsKey(itemType)) ? settings[itemType] : string.Empty;
+            var existingItem = GetAllRulesUsed().FirstOrDefault(s => s.ItemType == itemType);
+            return (existingItem!=null) ? existingItem.RuleName : string.Empty;
         }
 
-        private Dictionary<ItemType, string> GetAllRulesUsed()
+        private List<NewRule> GetAllRulesUsed()
         {
             var fileFullPath = ConfigurationManager.AppSettings["SettingsFile"];
             if (!File.Exists(fileFullPath))
-                return new Dictionary<ItemType, string>();
+                return new List<NewRule>();
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
             {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Dictionary<ItemType, string>));
-                return (xmlSerializer.Deserialize(fs) as Dictionary<ItemType, string>);
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<NewRule>));
+                return (xmlSerializer.Deserialize(fs) as List<NewRule>);
             }
         }
 
         public bool SetRule(NewRule rule)
         {
             var existingSettings = GetAllRulesUsed();
-            if (existingSettings.ContainsKey(rule.ItemType))
-                existingSettings[rule.ItemType] = rule.RuleName;
+            if (existingSettings.FirstOrDefault(r=>r.ItemType==rule.ItemType)!=null)
+                existingSettings.First(r=>r.ItemType==rule.ItemType).RuleName = rule.RuleName;
             else
-                existingSettings.Add(rule.ItemType, rule.RuleName);
+                existingSettings.Add(rule);
             
             var fileFullPath = ConfigurationManager.AppSettings["SettingsFile"];
 
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Create))
             {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(Dictionary<ItemType, string>));
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<NewRule>));
                 xmlSerializer.Serialize(fs,existingSettings);
                 return true;
             }

@@ -10,10 +10,11 @@
 
 <h2>Settings</h2>
 Use:
+
 <select id="rulesSelector">
     @foreach (var alg in Model.ScoreAlgorythms)
     {
-        <option value="@alg.Name" >@alg.Description</option> 
+        <option value="@alg.Name">@alg.Description</option> 
     }
 </select>
 
