@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sciendo.Core", "Sciendo.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation.DummyDataProvider", "Simulation.DummyDataProvider\Simulation.DummyDataProvider.csproj", "{CDF1554E-05DE-4046-83E6-F25FF3698E19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulation.LastFmDataProvider", "Simulation.LastFmDataProvider\Simulation.LastFmDataProvider.csproj", "{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{CDF1554E-05DE-4046-83E6-F25FF3698E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDF1554E-05DE-4046-83E6-F25FF3698E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDF1554E-05DE-4046-83E6-F25FF3698E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

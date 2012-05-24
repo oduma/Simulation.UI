@@ -9,5 +9,9 @@ namespace Simulation.UI.Models
     public class SettingsModel
     {
         public IEnumerable<ScoreAlgorythm> ScoreAlgorythms { get; set; }
+
+        public TopProviderSettings TopProviderSettings { get; set; }
+
+        public bool ShouldAsk { get; set; }
     }
 }

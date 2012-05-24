@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d380ddc3-5e30-4189-8f10-fac305056aef</ProjectGuid>
+    <ProjectGuid>{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Simulation.LastFmDataProvider</RootNamespace>
@@ -40,8 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TopProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sciendo.Core\Sciendo.Core.csproj">
+      <Project>{DA778FF7-2370-4F23-9691-CD6ABDC73A9B}</Project>
+      <Name>Sciendo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

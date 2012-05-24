@@ -7,6 +7,7 @@ using Simulation.UI.Models;
 using Sciendo.Core.Providers;
 using Sciendo.Core;
 using Sciendo.Core.Providers.DataTypes;
+using Simulation.LastFmDataProvider;
 
 namespace Simulation.UI.Controllers
 {
@@ -31,8 +32,11 @@ namespace Simulation.UI.Controllers
             if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
                 throw new ArgumentException("argument id is not an ItemType");
             IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+            ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var model = new SettingsModel();
             model.ScoreAlgorythms = algorythmPoolProvider.GetAvailableScoreAlgorythms(currentItemType);
+            model.ShouldAsk = (model.ScoreAlgorythms.FirstOrDefault(a => a.InUse) != null) 
+                && (topRecordProvider.GetTopProcessed().FirstOrDefault(r => r.ItemType == currentItemType) != null);
             return View("Settings", model);
         }
 
@@ -47,6 +51,23 @@ namespace Simulation.UI.Controllers
             
             return Json(alg.SetRule(rule), JsonRequestBehavior.AllowGet);
         }
+
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult TryAuthorize(string id)
+        {
+            TopProvider topProvider = new TopProvider();
+            string token = "";
+            string error = "";
+            var authorizationToken = topProvider.TryGetAuthorizationToken(out token, out error);
+            ItemType currentItemType;
+            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
+                throw new ArgumentException("argument id is not an ItemType");
+            //NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
+            //IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult AddToTotals(string id)
         {
             ItemType currentItemType;

@@ -176,12 +176,19 @@
       <Project>{CDF1554E-05DE-4046-83E6-F25FF3698E19}</Project>
       <Name>Simulation.DummyDataProvider</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Simulation.LastFmDataProvider\Simulation.LastFmDataProvider.csproj">
+      <Project>{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}</Project>
+      <Name>Simulation.LastFmDataProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LayoutPopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Settings.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\DummyTopProviderSettings.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -202,8 +209,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51013</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/Simulation.UI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

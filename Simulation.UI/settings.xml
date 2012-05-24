@@ -2,6 +2,6 @@
 <ArrayOfNewRule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NewRule>
     <ItemType>Track</ItemType>
-    <RuleName>F1</RuleName>
+    <RuleName>Top 3 (3,2,1)</RuleName>
   </NewRule>
 </ArrayOfNewRule>
