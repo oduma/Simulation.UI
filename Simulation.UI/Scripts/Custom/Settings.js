@@ -1,7 +1,7 @@
 ﻿$(function () {
     $("#dialog-confirm").dialog({
-        resizable: false,
-        height: 140,
+        resizable: true,
+        height: 240,
         modal: true,
         autoOpen:false,
         buttons: {
@@ -23,12 +23,12 @@ $(function () {
         // Store the current value on focus, before it changes
         previous = this.value;
     }).change(function () {
-        $("#dialogmessage").append("You had: " + previous + " and yu want: " + $("#rulesSelector option:selected").val());
+        $("#dialogmessage").append("Your previous tops were calculated using: " + previous + " rule. If you change to : " + $("#rulesSelector option:selected").val() +" your old tops will be deleted.<br/> Do you want to continue?");
         if ($("#shouldAsk").val() == "true") {
             $("#dialog-confirm").dialog("open");
         }
         else
-        $.getJSON("ChangeRules", "ruleName=" + $("#rulesSelector option:selected").val(), getRulesChanged);
+            $.getJSON("ChangeRules", "ruleName=" + $("#rulesSelector option:selected").val(), getRulesChanged);
     });
 })
 function getRulesChanged(response) {
