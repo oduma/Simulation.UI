@@ -33,6 +33,7 @@ namespace Simulation.UI.Controllers
                 throw new ArgumentException("argument id is not an ItemType");
             IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
+            var topProcessed = topRecordProvider.GetTopProcessed();
             var model = new SettingsModel();
             model.ScoreAlgorythms = algorythmPoolProvider.GetAvailableScoreAlgorythms(currentItemType);
             model.ShouldAsk = (model.ScoreAlgorythms.FirstOrDefault(a => a.InUse) != null) 

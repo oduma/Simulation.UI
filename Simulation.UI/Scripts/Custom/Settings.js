@@ -6,6 +6,7 @@
         autoOpen:false,
         buttons: {
             "Ok": function () {
+                $.getJSON("ChangeRules", "ruleName=" + $("#rulesSelector option:selected").val(), getRulesChanged);
                 $(this).dialog("close");
             },
             Cancel: function () {
