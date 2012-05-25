@@ -13,6 +13,15 @@ function addTotalsAgain(totalsAfterWeek)
     $("#action"+totalsAfterWeek.WeekNo).append("<p>Processed</p>");
     getTotalsAgain(totalsAfterWeek.TopItems);
 }
+
+$(function () {
+    $('#settings-dialog').dialog({
+        autoOpen: false,
+        width: 400,
+        resizable: false,
+        modal: true
+    });
+});
 $(function () {
     $("#addToTotal"+$("#nextWeekToProcess").val()).click(function (event) {
         var url, data;
