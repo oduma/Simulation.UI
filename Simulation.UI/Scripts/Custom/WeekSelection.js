@@ -35,6 +35,8 @@ $(function () {
 function getRulesChanged(response) {
     $("nextWeekToProcess").val("1");
     getTotalsAgain(null);
+    $("#accordion").accordion("option", "active", "0");
+
 }
 
 $(document).ready(function () {
@@ -42,8 +44,9 @@ $(document).ready(function () {
 })
 function getTotalsAgain(newTotals) {
     $("#totalsList").clearGridData();
-    for (i = 0; i < newTotals.length; i++)
-        $("#totalsList").jqGrid('addRowData', i + 1, newTotals[i]);
+    if(newTotals!=null)
+        for (i = 0; i < newTotals.length; i++)
+            $("#totalsList").jqGrid('addRowData', i + 1, newTotals[i]);
 }
 
 function addTotalsAgain(totalsAfterWeek)
@@ -51,6 +54,7 @@ function addTotalsAgain(totalsAfterWeek)
     $("#addToTotal" + totalsAfterWeek.WeekNo).remove();
     $("#action"+totalsAfterWeek.WeekNo).append("<p>Processed</p>");
     getTotalsAgain(totalsAfterWeek.TopItems);
+    $("#shouldAsk").val("True");
 }
 
 $(function () {
