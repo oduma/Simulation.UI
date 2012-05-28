@@ -13,14 +13,8 @@ namespace Simulation.DummyDataProvider
 {
     public class DummyTopTotalsProvider:DummyTopRecordProvider,ITopTotalsProvider
     {
-        public DummyTopTotalsProvider()
-        {
-            ScoreRule = ScoreItem;
-        }
 
-        public Func<int, int> ScoreRule { get; set; }
-
-        public void SaveTotalForItems(WeeklyTop topTotalForModel)
+        public void SaveTotalForItems(WeeklyTop topTotalForModel,Func<int,int> ScoreRule)
         {
             List<TopItem> existingItems = GetTotalItems(topTotalForModel.ItemType).ToList();
 
@@ -42,30 +36,13 @@ namespace Simulation.DummyDataProvider
                 else
                     break;
             }
-            TrySaveItems(existingItems);
-            RecordSavedWeek(topTotalForModel);
+            TrySaveItems(existingItems, topTotalForModel.ItemType);
+            RecordSavedWeeks(new List<WeekSummary> { new WeekSummary { ItemType = topTotalForModel.ItemType, WeekNo = topTotalForModel.WeekNo } });
         }
 
-        private void RecordSavedWeek(WeeklyTop weeklyTop)
+        private void TrySaveItems(List<TopItem> existingItems, ItemType itemType)
         {
-            List<WeekSummary> topRecordedItems = GetTopProcessed().ToList();
-            topRecordedItems.Add(new WeekSummary {ItemType=weeklyTop.ItemType, WeekNo = weeklyTop.WeekNo });
-            var fileFullPath = ConfigurationManager.AppSettings["TopRecordFile"];
-
-            using (FileStream fs = new FileStream(fileFullPath, FileMode.Create))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(List<WeekSummary>));
-                serializer.Serialize(fs, topRecordedItems);
-                fs.Flush();
-                fs.Close();
-            }
-
-        }
-
-        private void TrySaveItems(List<TopItem> existingItems)
-        {
-            var fileFullPath = ConfigurationManager.AppSettings["TotalsLocation"] + @"\" + existingItems[0].ItemType.ToString() + ".xml";
-
+            var fileFullPath = ConfigurationManager.AppSettings["TotalsLocation"] + @"\" + itemType.ToString() + ".xml";
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Create))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(List<TopItem>));
@@ -82,21 +59,6 @@ namespace Simulation.DummyDataProvider
                 existingItems[i].Position = i + 1;
         }
 
-        private int ScoreItem(int rank)
-        {
-            switch (rank)
-            {
-                case 1:
-                    return 3;
-                case 2:
-                    return 2;
-                case 3:
-                    return 1;
-                default:
-                    return 0;
-            }
-        }
-
         public IEnumerable<TopItem> GetTotalItems(ItemType itemType)
         {
             var fileFullPath = ConfigurationManager.AppSettings["TotalsLocation"] + @"\" + itemType.ToString() + ".xml";
@@ -107,6 +69,16 @@ namespace Simulation.DummyDataProvider
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<TopItem>));
                 return xmlSerializer.Deserialize(fs) as List<TopItem>;
             }
+        }
+
+
+        public void ClearAll(ItemType itemType)
+        {
+            List<TopItem> topItems = GetTotalItems(itemType).ToList();
+            topItems.Clear();
+            TrySaveItems(topItems, itemType);
+
+            ClearRecords(itemType);
         }
     }
 }

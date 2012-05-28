@@ -10,22 +10,17 @@
         <script src="@Url.Content("~/Content/Grids/Scripts/grid.locale-en.js")" type="text/javascript"></script>
         <script src="@Url.Content("~/Content/Grids/Scripts/jquery.jqGrid.min.js")" type="text/javascript"></script>
         <script src="@Url.Content("~/Scripts/Custom/WeekSelection.js")" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(function () {
-                $("#settings").click(function () {
-                    $("#settings-dialog").load('@Url.Action("Settings")', function () {
-                        $("#settings-dialog").dialog("open");
-                    });
-                });
-            })
-
-        </script>
 }
 
 @section TopOfPage
 {
-    <input type="button" id="settings" value="Settings"/>
-    <div id="settings-dialog"></div>
+    <select id="rulesSelector">
+        @foreach (var alg in Model.Settings.ScoreAlgorythms)
+        {
+            <option value="@alg.Name" selected="@alg.InUse">@alg.Description</option> 
+        }
+    </select>
+
 }
 <h2>Week Selection 
 <span class="typeSelector">
@@ -55,6 +50,13 @@
  </h2>
 <input type="hidden" value="@Model.ItemType" id="typeOfSelection"/>
 <input type="hidden" value="@Model.NextWeekToProcess" id="nextWeekToProcess" />
+<input type="hidden" value="@Model.CurrentAlgorythm.NoOfItemsConsidered" id="noOfItems" />
+<input type="hidden" id="shouldAsk" value="@(Model.NextWeekToProcess>1)" />
+<div id="dialog-confirm" title="Do you want to delete existing data?">
+	<p>
+    <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;">
+    </span><div id="dialogmessage"></div></p>
+</div>
 <div id="availableWeeks">
     <label>Available Weeks:</label>
     <div id="accordion">

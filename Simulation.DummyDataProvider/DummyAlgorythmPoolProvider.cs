@@ -12,6 +12,8 @@ namespace Simulation.DummyDataProvider
 {
     public class DummyAlgorythmPoolProvider:IAlgorythmPoolProvider
     {
+        private IEnumerable<ScoreAlgorythm> _scoreAlgorythms;
+
         public static int Rule321(int rank)
         {
             switch (rank)
@@ -55,7 +57,7 @@ namespace Simulation.DummyDataProvider
         public IEnumerable<ScoreAlgorythm> GetAvailableScoreAlgorythms(ItemType itemType)
         {
             string currentlyInUse = GetCurrentlyInUse(itemType);
-            return new ScoreAlgorythm[] {
+            _scoreAlgorythms = new ScoreAlgorythm[] {
                     new ScoreAlgorythm{ 
                         Name="Top 3 (3,2,1)",
                         Description="First gets 3 points, Second gets 2 points, Third gets 1 point",
@@ -70,6 +72,7 @@ namespace Simulation.DummyDataProvider
                         InUse=(currentlyInUse=="F1")
                     }
             };
+            return _scoreAlgorythms;
         }
 
         private string GetCurrentlyInUse(ItemType itemType)
@@ -107,6 +110,13 @@ namespace Simulation.DummyDataProvider
                 return true;
             }
             return false;
+        }
+
+
+        public ScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType)
+        {
+            var availableAlgorhytms=(_scoreAlgorythms)??GetAvailableScoreAlgorythms(currentItemType);
+            return (availableAlgorhytms.FirstOrDefault(a => a.InUse))??availableAlgorhytms.First();
         }
     }
 }

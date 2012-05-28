@@ -13,6 +13,7 @@ namespace Simulation.UI.Models
         {
             ItemType  = itemType;
         }
+
         public IEnumerable<Week> AvailableWeeks { get; set; }
 
         public WeeklyTop FirstWeekTop { get; set; }
@@ -20,6 +21,10 @@ namespace Simulation.UI.Models
         public ItemType ItemType { get; set; }
 
         public int NextWeekToProcess { get; set; }
+
+        public ScoreAlgorythm CurrentAlgorythm { get; set; }
+
+        public SettingsModel Settings { get; set; }
 
     }
 }

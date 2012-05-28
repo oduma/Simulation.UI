@@ -12,6 +12,7 @@ namespace Simulation.UI.Models
 
         public TopProviderSettings TopProviderSettings { get; set; }
 
-        public bool ShouldAsk { get; set; }
+        
+
     }
 }

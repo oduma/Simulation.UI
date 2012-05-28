@@ -6,7 +6,7 @@
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist1</ItemName>
     <ItemType>Artist</ItemType>
-    <Score>9</Score>
+    <Score>6</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
   <TopItem>
@@ -15,7 +15,7 @@
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist2</ItemName>
     <ItemType>Artist</ItemType>
-    <Score>6</Score>
+    <Score>4</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
   <TopItem>
@@ -24,7 +24,7 @@
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist3</ItemName>
     <ItemType>Artist</ItemType>
-    <Score>3</Score>
+    <Score>2</Score>
     <EntryWeek>1</EntryWeek>
   </TopItem>
 </ArrayOfTopItem>

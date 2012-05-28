@@ -24,5 +24,32 @@ namespace Simulation.DummyDataProvider
             }
         }
 
+        public void RecordSavedWeeks(List<WeekSummary> weekSumaries)
+        {
+            List<WeekSummary> topRecordedItems = GetTopProcessed().ToList();
+            topRecordedItems.AddRange(weekSumaries);
+            Save(topRecordedItems);
+        }
+
+        private void Save(List<WeekSummary> weekSummaries)
+        {
+            var fileFullPath = ConfigurationManager.AppSettings["TopRecordFile"];
+
+            using (FileStream fs = new FileStream(fileFullPath, FileMode.Create))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<WeekSummary>));
+                serializer.Serialize(fs, weekSummaries);
+                fs.Flush();
+                fs.Close();
+            }
+
+
+        }
+
+        public void ClearRecords(ItemType itemType)
+        {
+            List<WeekSummary> remainingListSummaries = GetTopProcessed().Where(w => w.ItemType != itemType).ToList();
+            Save(remainingListSummaries);
+        }
     }
 }

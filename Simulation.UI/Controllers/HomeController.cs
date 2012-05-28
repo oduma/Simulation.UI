@@ -34,11 +34,7 @@ namespace Simulation.UI.Controllers
             IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var topProcessed = topRecordProvider.GetTopProcessed();
-            var model = new SettingsModel();
-            model.ScoreAlgorythms = algorythmPoolProvider.GetAvailableScoreAlgorythms(currentItemType);
-            model.ShouldAsk = (model.ScoreAlgorythms.FirstOrDefault(a => a.InUse) != null) 
-                && (topRecordProvider.GetTopProcessed().FirstOrDefault(r => r.ItemType == currentItemType) != null);
-            return View("Settings", model);
+            return View("Settings", new SettingsModel());
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
@@ -49,8 +45,10 @@ namespace Simulation.UI.Controllers
                 throw new ArgumentException("argument id is not an ItemType");
             NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
             IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            
-            return Json(alg.SetRule(rule), JsonRequestBehavior.AllowGet);
+            var result = alg.SetRule(rule);
+            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            topTotalsProvider.ClearAll(currentItemType);
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
@@ -92,7 +90,9 @@ namespace Simulation.UI.Controllers
 
             TotalsAfterWeek totalsAfterWeek = new TotalsAfterWeek();
             ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
-            topTotalsProvider.SaveTotalForItems(topForTotalModel);
+            IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+
+            topTotalsProvider.SaveTotalForItems(topForTotalModel,algorythmPoolProvider.GetCurrentAlgorythm(currentItemType).ScoreRule);
             totalsAfterWeek.TopItems = topTotalsProvider.GetTotalItems(currentItemType);
             totalsAfterWeek.WeekNo = topForTotalModel.WeekNo;
             return Json(totalsAfterWeek/*,JsonRequestBehavior.AllowGet*/);
@@ -125,6 +125,10 @@ namespace Simulation.UI.Controllers
                 weekSelectionModel.NextWeekToProcess = 1;
             ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
             weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, 10, weekSelectionModel.ItemType);
+            IAlgorythmPoolProvider algoryhtmProvider=ClientFactory.GetClient<IAlgorythmPoolProvider>();
+            weekSelectionModel.Settings = new SettingsModel();
+            weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
+            weekSelectionModel.CurrentAlgorythm = algoryhtmProvider.GetCurrentAlgorythm(currentItemType);
             return View(weekSelectionModel);
         }
 

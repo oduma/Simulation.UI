@@ -8,11 +8,11 @@ namespace Sciendo.Core.Providers
 {
     public interface ITopTotalsProvider
     {
-        Func<int,int> ScoreRule {get;set;}
-
-        void SaveTotalForItems(WeeklyTop topTotalForModel);
+        void SaveTotalForItems(WeeklyTop topTotalForModel, Func<int, int> ScoreRule);
 
         IEnumerable<TopItem> GetTotalItems(ItemType itemType);
+
+        void ClearAll(ItemType itemType);
 
     }
 }

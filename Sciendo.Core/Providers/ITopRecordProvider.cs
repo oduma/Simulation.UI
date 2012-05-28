@@ -9,5 +9,9 @@ namespace Sciendo.Core.Providers
     public interface ITopRecordProvider
     {
         IEnumerable<WeekSummary> GetTopProcessed();
+
+        void ClearRecords(ItemType itemType);
+
+        void RecordSavedWeeks(List<WeekSummary> weekSummaries);
     }
 }

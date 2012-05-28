@@ -1,4 +1,43 @@
-﻿$(document).ready(function () {
+﻿$(function () {
+    $("#dialog-confirm").dialog({
+        resizable: true,
+        height: 240,
+        width:480,
+        modal: true,
+        autoOpen: false,
+        buttons: {
+            "Ok": function () {
+                $.getJSON("ChangeRules", "ruleName=" + $("#rulesSelector option:selected").val(), getRulesChanged);
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+});
+
+$(function () {
+    var previous;
+
+    $("#rulesSelector").focus(function () {
+        // Store the current value on focus, before it changes
+        previous = this.value;
+    }).change(function () {
+        $("#dialogmessage").append("Your previous tops were calculated using: " + previous + " rule. If you change to : " + $("#rulesSelector option:selected").val() + " your old tops will be deleted.<br/> Do you want to continue?");
+        if ($("#shouldAsk").val() == "True") {
+            $("#dialog-confirm").dialog("open");
+        }
+        else
+            $.getJSON("ChangeRules", "ruleName=" + $("#rulesSelector option:selected").val(), getRulesChanged);
+    });
+})
+function getRulesChanged(response) {
+    $("nextWeekToProcess").val("1");
+    getTotalsAgain(null);
+}
+
+$(document).ready(function () {
     $.getJSON("GetTotals", null, getTotalsAgain);
 })
 function getTotalsAgain(newTotals) {
@@ -15,30 +54,18 @@ function addTotalsAgain(totalsAfterWeek)
 }
 
 $(function () {
-    $('#settings-dialog').dialog({
-        autoOpen: false,
-        width: 400,
-        resizable: false,
-        modal: true
-    });
-});
-$(function () {
-    $("#addToTotal"+$("#nextWeekToProcess").val()).click(function (event) {
+    $("#addToTotal" + $("#nextWeekToProcess").val()).click(function (event) {
         var url, data;
         url = "AddToTotals";
+
         data = {
             "WeekNo": $("#nextWeekToProcess").val(),
-            "TopItems": [
-                    { "ItemName": $("#w" + $("#nextWeekToProcess").val() + "i1").text(),
-                        "Rank": "1"
-                    },
-                    { "ItemName": $("#w" + $("#nextWeekToProcess").val() + "i2").text(),
-                        "Rank": "2"
-                    },
-                    { "ItemName": $("#w" + $("#nextWeekToProcess").val() + "i3").text(),
-                        "Rank": "3"
-                    }]
+            "TopItems": []
         };
+        for (var i = 0; i < $("#noOfItems").val(); i++) {
+            data.TopItems.push({ "ItemName": $("#w" + $("#nextWeekToProcess").val() + "i" + (i + 1)).text(),
+                        "Rank": i+1});
+        }
         $.post(url, data, addTotalsAgain, "json");
     });
 
@@ -70,17 +97,13 @@ function printTop(weeklyTop) {
             url = "AddToTotals";
             data = {
                 "WeekNo": weeklyTop.WeekNo,
-                "TopItems": [
-                    { "ItemName": $("#w" + weeklyTop.WeekNo + "i1").text(),
-                        "Rank": "1"
-                    },
-                    { "ItemName": $("#w" + weeklyTop.WeekNo + "i2").text(),
-                        "Rank": "2"
-                    },
-                    { "ItemName": $("#w" + weeklyTop.WeekNo + "i3").text(),
-                        "Rank": "3"
-                    }]
+                "TopItems": []
             };
+            for (var i = 0; i < $("#noOfItems").val(); i++) {
+                data.TopItems.push({ "ItemName": $("#w" + weeklyTop.WeekNo + "i" + (i + 1)).text(),
+                    "Rank": i + 1
+                });
+            }
             $.post(url, data, addTotalsAgain, "json");
 
         });

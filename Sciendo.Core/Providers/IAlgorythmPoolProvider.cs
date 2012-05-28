@@ -11,5 +11,7 @@ namespace Sciendo.Core.Providers
         IEnumerable<ScoreAlgorythm> GetAvailableScoreAlgorythms(ItemType itemType);
 
         bool SetRule(NewRule rule);
+
+        ScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType);
     }
 }
