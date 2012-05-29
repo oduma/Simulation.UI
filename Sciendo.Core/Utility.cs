@@ -16,5 +16,14 @@ namespace Sciendo.Core
             MemoryStream ms = new MemoryStream(new UTF8Encoding().GetBytes(xmlString));
             return xmlSerializer.Deserialize(ms) as T;
         }
+
+        public static string Serialize<T>(T data) where T : class
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+            MemoryStream ms = new MemoryStream();
+            xmlSerializer.Serialize(ms, data);
+
+            return new UTF8Encoding().GetString(ms.GetBuffer());
+        }
     }
 }
