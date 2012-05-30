@@ -9,5 +9,7 @@ namespace Sciendo.Core.Providers
     public interface ITopProvider
     {
         WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType);
+
+        IEnumerable<Week> GetAvailableWeeks();
     }
 }

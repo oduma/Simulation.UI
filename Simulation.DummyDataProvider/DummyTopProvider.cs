@@ -30,5 +30,11 @@ namespace Simulation.DummyDataProvider
                 yield return new TopItem { Rank = i, Position = i, ItemName = itemType.ToString() + i, NumberOfPlays = 20 - i };
         }
 
+
+
+        public IEnumerable<Week> GetAvailableWeeks()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

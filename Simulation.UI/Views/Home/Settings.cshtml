@@ -10,17 +10,6 @@
 
 <h2>Settings</h2>
 Use:
-<div id="dialog-confirm" title="Do you want to delete existing data?">
-	<p>
-    <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;">
-    </span><div id="dialogmessage"></div></p>
-</div>
-<select id="rulesSelector">
-    @foreach (var alg in Model.ScoreAlgorythms)
-    {
-        <option value="@alg.Name" selected="@alg.InUse">@alg.Description</option> 
-    }
-</select>
 @section TopProvider
 {
 @{Html.RenderPartial("DummyTopProviderSettings");}

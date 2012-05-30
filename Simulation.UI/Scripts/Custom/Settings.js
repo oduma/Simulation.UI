@@ -1,5 +1,9 @@
 ﻿$(function () {
     $("#getAuthorization").click(function () {
-        $.getJSON("TryAuthorize", null, getRulesChanged);
+        $.getJSON("TryAuthorize", null, useToken);
     });
 })
+
+function useToken(token) {
+    window.location = token;
+}

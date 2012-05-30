@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Sciendo.Core.Providers.DataTypes;
 
-namespace Simulation.UI.Models
+namespace Sciendo.Core.Providers.DataTypes
 {
-    public class Week:WeekSummary
+    public class WeekModel:Week
     {
-
-        public DateTime StartingFrom { get; set; }
-
-        public DateTime EndingIn { get; set; }
 
         public string DisplayValue { get { return string.Format("({0:dd/MMM/yyyy} - {1:dd/MMM/yyyy})", StartingFrom,EndingIn); } }
 

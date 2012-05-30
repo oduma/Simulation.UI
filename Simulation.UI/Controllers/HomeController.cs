@@ -63,8 +63,10 @@ namespace Simulation.UI.Controllers
                 throw new ArgumentException("argument id is not an ItemType");
             //NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
             //IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-
-            return Json(true, JsonRequestBehavior.AllowGet);
+            if (authorizationToken)
+                return Json("http://www.last.fm/api/auth/?api_key=" + TopProvider.ApiKey + "&token=" + token, JsonRequestBehavior.AllowGet);
+            else
+                return Json(error, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult AddToTotals(string id)

@@ -5,8 +5,11 @@ using System.Text;
 
 namespace Sciendo.Core.Providers.DataTypes
 {
-    public abstract class TopProviderSettings
+    public class Week:WeekSummary
     {
-        public string ProviderName { get; set; }
+
+        public DateTime StartingFrom { get; set; }
+
+        public DateTime EndingIn { get; set; }
     }
 }

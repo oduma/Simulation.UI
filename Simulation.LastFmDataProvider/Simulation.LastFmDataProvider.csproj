@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LfmSession.cs" />
+    <Compile Include="LfmSessionResponse.cs" />
     <Compile Include="LfmTokenResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopProvider.cs" />
@@ -49,9 +51,6 @@
       <Project>{DA778FF7-2370-4F23-9691-CD6ABDC73A9B}</Project>
       <Name>Sciendo.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="tokenokresponse.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -54,6 +54,7 @@
     <Compile Include="Providers\DataTypes\ScoreAlgorythm.cs" />
     <Compile Include="Providers\DataTypes\TopItem.cs" />
     <Compile Include="Providers\DataTypes\TopProviderSettings.cs" />
+    <Compile Include="Providers\DataTypes\Week.cs" />
     <Compile Include="Providers\DataTypes\WeeklyTop.cs" />
     <Compile Include="Providers\DataTypes\WeekSummary.cs" />
     <Compile Include="Providers\IAlgorythmPoolProvider.cs" />

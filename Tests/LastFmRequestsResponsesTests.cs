@@ -31,5 +31,35 @@ namespace Tests
             Assert.AreEqual(expected.Token, actual.Token);
 
         }
+
+        [Test]
+        public void DeSerialize_SessionOk_Response()
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(@"Data\sessionokresponse.xml");
+            string expectedXml = xmlDocument.InnerXml;
+
+            LfmSessionResponse actual = Utility.Deserialize<LfmSessionResponse>(expectedXml);
+
+            Assert.IsNotNull(actual);
+
+            LfmSessionResponse expected = new LfmSessionResponse { Status = "ok", Session = new LfmSession { UserName = "MyLastFMUserName", Key = "d580d57f32848f5dcf574d1ce18d78b2", Subscriber = "0" } };
+
+            Assert.AreEqual(expected.Status, actual.Status);
+
+            Assert.AreEqual(expected.Session.UserName, actual.Session.UserName);
+
+            Assert.AreEqual(expected.Session.Key, actual.Session.Key);
+
+            Assert.AreEqual(expected.Session.Subscriber, actual.Session.Subscriber);
+        }
+
+        [Test]
+        public void GetASessionKey_No_Token_No_API_Defined()
+        {
+            TopProvider topProvider = new TopProvider();
+            var response = topProvider.TryGetASession(string.Empty);
+            Assert.IsNotNull(response);
+        }
     }
 }

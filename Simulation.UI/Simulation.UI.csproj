@@ -77,7 +77,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\OptionsModel.cs" />
-    <Compile Include="Models\Week.cs" />
+    <Compile Include="Models\WeekModel.cs" />
     <Compile Include="Models\WeekSelectionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
