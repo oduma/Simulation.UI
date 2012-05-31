@@ -47,17 +47,7 @@ namespace Simulation.LastFmDataProvider
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(LfmGetWeekChartlistResponse));
-                int i = 1;
-                var weeks = (xmlSerializer.Deserialize(fs) as LfmGetWeekChartlistResponse).ChartWeeks
-                    .Where(wr=> new DateTime(1970,1,1).AddSeconds(wr.To).Year==DateTime.Now.Year)
-                    .Select(wr => 
-                    new Week 
-                        { 
-                            EndingIn = new DateTime(1970, 1, 1).AddSeconds(wr.To), 
-                            StartingFrom = new DateTime(1970, 1, 1).AddSeconds(wr.From),
-                            WeekNo=i++
-                        });
-                return weeks;
+                return (xmlSerializer.Deserialize(fs) as LfmGetWeekChartlistResponse).ChartWeeks.TransformToWeeks();
             }
         }
     }

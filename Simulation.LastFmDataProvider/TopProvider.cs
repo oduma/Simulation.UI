@@ -5,6 +5,7 @@ using System.Text;
 using Sciendo.Core.Providers;
 using Sciendo.Core.Providers.DataTypes;
 using Sciendo.Core;
+using Simulation.LastFmDataProvider.DataTypes;
 
 namespace Simulation.LastFmDataProvider
 {
@@ -19,7 +20,8 @@ namespace Simulation.LastFmDataProvider
 
         public IEnumerable<Week> GetAvailableWeeks()
         {
-            throw new NotImplementedException();
+            var url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklychartlist&user=scentmaster&api_key=" + ApiKey;
+            return Utility.Deserialize<LfmGetWeekChartlistResponse>(HttpHelper.Get(url)).ChartWeeks.TransformToWeeks();
         }
     }
 }
