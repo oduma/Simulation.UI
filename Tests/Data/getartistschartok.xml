@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+  <weeklyartistchart user="scentMaster" from="1337515200" to="1338120000">
+    <artist rank="1">
+      <name>Captain Beefheart &amp; His Magic Band</name>
+      <mbid>8dcd04e4-7695-4d80-bae9-1d7d680a38ef</mbid>
+      <playcount>3</playcount>
+      <url>http://www.last.fm/music/Captain+Beefheart+&amp;+His+Magic+Band</url>
+    </artist>
+    <artist rank="2">
+      <name>Luca Carboni</name>
+      <mbid>69a5a5ae-d8b0-44e5-94ef-8973b374da84</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Luca+Carboni</url>
+    </artist>
+  </weeklyartistchart>
+</lfm>

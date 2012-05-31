@@ -24,5 +24,18 @@ namespace Simulation.LastFmDataProvider
             return weeks.ToList();
     
         }
+
+        public static List<TopItem> TransformToTopItems(this List<Artist> artists, int topLength)
+        {
+            return artists
+                .Take(topLength)
+                .Select(a => 
+                    new TopItem 
+                    { 
+                        ItemName = a.Name, 
+                        ItemType = ItemType.Artist, 
+                        NumberOfPlays = a.PlayCount, 
+                        Rank = a.Rank }).ToList();
+        }
     }
 }

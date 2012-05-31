@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTypes\Artist.cs" />
     <Compile Include="DataTypes\ChartWeek.cs" />
+    <Compile Include="DataTypes\LfmGetChartArtistsResponse.cs" />
     <Compile Include="DataTypes\LfmGetWeekChartlistResponse.cs" />
     <Compile Include="DummyLfmTopProvider.cs" />
     <Compile Include="LfmResponseExtensions.cs" />

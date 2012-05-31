@@ -16,12 +16,32 @@ namespace Simulation.LastFmDataProvider
     {
         public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
         {
-            WeeklyTop weeklyTop = new WeeklyTop();
-            weeklyTop.WeekNo = weekNo;
-            weeklyTop.TopItems = GetTopItems(topLength, itemType);
-            weeklyTop.TopProcessed = IsWeekProcessed(GetTopProcessed(), weekNo, itemType);
-            weeklyTop.ItemType = itemType;
-            return weeklyTop;
+
+            if (itemType == ItemType.Artist)
+                return GetTopByWeekForArtists(weekNo, topLength,IsWeekProcessed(GetTopProcessed(), weekNo, itemType));
+            else
+                return GetTopbyWeekForTracks(weekNo, topLength,IsWeekProcessed(GetTopProcessed(), weekNo, itemType));
+        }
+
+        private WeeklyTop GetTopbyWeekForTracks(int weekNo, int topLength, bool isWeekProcessed)
+        {
+            throw new NotImplementedException();
+        }
+
+        private WeeklyTop GetTopByWeekForArtists(int weekNo, int topLength, bool isWeekProcessed)
+        {
+            var fileFullPath = ConfigurationManager.AppSettings["ArtistsDummyFile"];
+
+            if (!File.Exists(fileFullPath))
+                return new WeeklyTop();
+            using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(LfmGetChartArtistsResponse));
+                return new WeeklyTop { ItemType = ItemType.Artist,TopProcessed=isWeekProcessed, WeekNo = weekNo, TopItems = (xmlSerializer.Deserialize(fs) as LfmGetChartArtistsResponse)
+                    .Artists.TransformToTopItems(topLength) };
+            }
+
+
         }
 
 
@@ -29,13 +49,6 @@ namespace Simulation.LastFmDataProvider
         {
             return topRecordedItems.FirstOrDefault(r => r.WeekNo == weekNo && r.ItemType.ToString().ToLower() == itemType.ToString().ToLower()) != null;
         }
-
-        private IEnumerable<TopItem> GetTopItems(int maxRank, ItemType itemType)
-        {
-            for (int i = 1; i < maxRank + 1; i++)
-                yield return new TopItem { Rank = i, Position = i, ItemName = itemType.ToString() + i, NumberOfPlays = 20 - i };
-        }
-
 
         public IEnumerable<Week> GetAvailableWeeks()
         {

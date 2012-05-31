@@ -15,8 +15,9 @@ namespace Simulation.LastFmDataProvider
         {
             var requestedWeek = GetAvailableWeeks().First(w => w.WeekNo == weekNo);
             var url = @"http://ws.audioscrobbler.com/2.0/?method=user." + 
-                ((itemType==ItemType.Artist)?"getweeklyartistchart":"getweeklytrackchart") + 
-                    @"&user=scentmaster&api_key=" + ApiKey;
+                ((itemType==ItemType.Artist)?"getweeklyartistchart":"getweeklytrackchart") +
+                    @"&user=scentmaster&from=" + requestedWeek.StartingFrom.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString()
+                    + "&to=" + requestedWeek.EndingIn.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() + "&api_key=" + ApiKey;
             return new WeeklyTop();
         }
 

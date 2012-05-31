@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+  <weeklyartistchart user="scentMaster" from="1337515200" to="1338120000">
+    <artist rank="1">
+      <name>Captain Beefheart &amp; His Magic Band</name>
+      <mbid>8dcd04e4-7695-4d80-bae9-1d7d680a38ef</mbid>
+      <playcount>3</playcount>
+      <url>http://www.last.fm/music/Captain+Beefheart+&amp;+His+Magic+Band</url>
+    </artist>
+    <artist rank="2">
+      <name>Luca Carboni</name>
+      <mbid>69a5a5ae-d8b0-44e5-94ef-8973b374da84</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Luca+Carboni</url>
+    </artist>
+    <artist rank="3">
+      <name>Suede</name>
+      <mbid>a55c2f1b-3f3f-4d6a-aa30-5e186dbadce6</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Suede</url>
+    </artist>
+    <artist rank="4">
+      <name>Fleetwood Mac</name>
+      <mbid>bd13909f-1c29-4c27-a874-d4aaf27c5b1a</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Fleetwood+Mac</url>
+    </artist>
+    <artist rank="5">
+      <name>Joy Division</name>
+      <mbid>9a58fda3-f4ed-4080-a3a5-f457aac9fcdd</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Joy+Division</url>
+    </artist>
+    <artist rank="6">
+      <name>Leonard Cohen</name>
+      <mbid>65314b12-0e08-43fa-ba33-baaa7b874c15</mbid>
+      <playcount>2</playcount>
+      <url>http://www.last.fm/music/Leonard+Cohen</url>
+    </artist>
+    <artist rank="7">
+      <name>Zucchero</name>
+      <mbid>00ed154e-8679-42f0-8f42-e59bd7e185af</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Zucchero</url>
+    </artist>
+    <artist rank="8">
+      <name>Paloma Faith</name>
+      <mbid>f23f6dd0-bfb0-43d5-bf06-eae4315db502</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Paloma+Faith</url>
+    </artist>
+    <artist rank="9">
+      <name>Florin Bogardo</name>
+      <mbid>1c378393-f5b8-4794-83b1-cb4c71b6a665</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Florin+Bogardo</url>
+    </artist>
+    <artist rank="10">
+      <name>Mercedes Sosa</name>
+      <mbid>324b9329-7be6-491f-9ee1-65bfa10c7577</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Mercedes+Sosa</url>
+    </artist>
+    <artist rank="11">
+      <name>Blue Öyster Cult</name>
+      <mbid>c7423e0c-ab3e-4ab4-be10-cdff5a9d3062</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Blue+%C3%96yster+Cult</url>
+    </artist>
+    <artist rank="12">
+      <name>The Animals</name>
+      <mbid>4d8afa16-4018-4ca8-8b5e-ede8f9314562</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/The+Animals</url>
+    </artist>
+    <artist rank="13">
+      <name>Taj Mahal</name>
+      <mbid>4f48167c-29b8-4bde-a749-6803ce0a3922</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Taj+Mahal</url>
+    </artist>
+    <artist rank="14">
+      <name>Roy Harper</name>
+      <mbid>8fc0c1d2-9be0-464f-98ee-ae7ae5b0086b</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Roy+Harper</url>
+    </artist>
+    <artist rank="15">
+      <name>Jovanotti</name>
+      <mbid>373b3663-ecc3-40c4-9241-838ae8ca34d0</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Jovanotti</url>
+    </artist>
+    <artist rank="16">
+      <name>Joe Dassin</name>
+      <mbid>475b7312-4fcb-49a4-8bcc-cf3a679b255a</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Joe+Dassin</url>
+    </artist>
+    <artist rank="17">
+      <name>Emerson, Lake &amp; Palmer</name>
+      <mbid>ad996aef-cc1c-42ac-af5c-619c370f4b8a</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Emerson,+Lake+&amp;+Palmer</url>
+    </artist>
+    <artist rank="18">
+      <name>Spyro Gyra</name>
+      <mbid>9a7c8025-1af8-42cd-8df8-857220610bc5</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Spyro+Gyra</url>
+    </artist>
+    <artist rank="19">
+      <name>Electric Light Orchestra</name>
+      <mbid>0c502791-4ee9-4c5f-9696-0602b721ff3b</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Electric+Light+Orchestra</url>
+    </artist>
+    <artist rank="20">
+      <name>Sonny Rollins</name>
+      <mbid>3b47247e-5b57-49b6-a0ed-bad80243802a</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Sonny+Rollins</url>
+    </artist>
+    <artist rank="21">
+      <name>Dan Andrei Aldea</name>
+      <mbid>89cff3da-3f51-4de3-9690-058950ae2850</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Dan+Andrei+Aldea</url>
+    </artist>
+    <artist rank="22">
+      <name>Los Lobos &amp; Antonio Banderas</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Los+Lobos+&amp;+Antonio+Banderas</url>
+    </artist>
+    <artist rank="23">
+      <name>CocoRosie</name>
+      <mbid>e162b2eb-6a42-4240-8c1b-c94d9a0acb73</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/CocoRosie</url>
+    </artist>
+    <artist rank="24">
+      <name>Ry Cooder</name>
+      <mbid>a4e2650b-938b-4b72-95bc-6e229cd34601</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Ry+Cooder</url>
+    </artist>
+    <artist rank="25">
+      <name>Chumbawamba</name>
+      <mbid>7b7b1e6f-e73e-41a0-9d72-8f0b30c6992d</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Chumbawamba</url>
+    </artist>
+    <artist rank="26">
+      <name>SaReGaMa</name>
+      <mbid>eb00b7d3-149c-4411-8003-5a51c9243442</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/SaReGaMa</url>
+    </artist>
+    <artist rank="27">
+      <name>Fanfare Ciocărlia</name>
+      <mbid>a98da524-e565-4d89-b729-17d5a5fe75e0</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Fanfare+Cioc%C4%83rlia</url>
+    </artist>
+    <artist rank="28">
+      <name>Julio Iglesias</name>
+      <mbid>3be4099e-f180-4038-af84-ae18a09eab02</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Julio+Iglesias</url>
+    </artist>
+    <artist rank="29">
+      <name>Adriano Celentano</name>
+      <mbid>d2b50525-1111-4906-aab6-4553f035f679</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Adriano+Celentano</url>
+    </artist>
+    <artist rank="30">
+      <name>Neil Young</name>
+      <mbid>75167b8b-44e4-407b-9d35-effe87b223cf</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Neil+Young</url>
+    </artist>
+    <artist rank="31">
+      <name>Deep Forest</name>
+      <mbid>67468e38-0c90-4318-b2d2-0c18b7b1e144</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Deep+Forest</url>
+    </artist>
+    <artist rank="32">
+      <name>Cocteau Twins</name>
+      <mbid>000fc734-b7e1-4a01-92d1-f544261b43f5</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Cocteau+Twins</url>
+    </artist>
+    <artist rank="33">
+      <name>Eagle-Eye Cherry</name>
+      <mbid>4a5777b3-f55b-437c-8b23-d9ee7791c7fc</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Eagle-Eye+Cherry</url>
+    </artist>
+    <artist rank="34">
+      <name>Genesis</name>
+      <mbid>8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Genesis</url>
+    </artist>
+    <artist rank="35">
+      <name>Vanessa Paradis</name>
+      <mbid>46193c80-959a-499d-b42f-f33ba7b9b18e</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Vanessa+Paradis</url>
+    </artist>
+    <artist rank="36">
+      <name>Gandalf</name>
+      <mbid>0e49cfc8-6c12-426d-8985-5005f9256e18</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Gandalf</url>
+    </artist>
+    <artist rank="37">
+      <name>Natassa Theodoridou</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Natassa+Theodoridou</url>
+    </artist>
+    <artist rank="38">
+      <name>Pixies</name>
+      <mbid>b6b2bb8d-54a9-491f-9607-7b546023b433</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Pixies</url>
+    </artist>
+    <artist rank="39">
+      <name>Guðrið Hansdóttir</name>
+      <mbid>7832ec42-468d-4b68-9067-3647a8615156</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Gu%C3%B0ri%C3%B0+Hansd%C3%B3ttir</url>
+    </artist>
+    <artist rank="40">
+      <name>Doru Stanculescu</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Doru+Stanculescu</url>
+    </artist>
+    <artist rank="41">
+      <name>Vino lubirea Mea (!DelaDap Remix)</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Vino+lubirea+Mea+(!DelaDap+Remix)</url>
+    </artist>
+    <artist rank="42">
+      <name>Florence + the Machine</name>
+      <mbid>5fee3020-513b-48c2-b1f7-4681b01db0c6</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Florence+%252B+the+Machine</url>
+    </artist>
+    <artist rank="43">
+      <name>John Cooper Clarke</name>
+      <mbid>7df6e6eb-8e3a-4402-a243-b5b01f0d9bec</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/John+Cooper+Clarke</url>
+    </artist>
+    <artist rank="44">
+      <name>Phil Collins</name>
+      <mbid>401c3991-b76b-499d-8082-9f2df958ef78</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Phil+Collins</url>
+    </artist>
+    <artist rank="45">
+      <name>Serge Gainsbourg</name>
+      <mbid>b21ef19b-c6aa-4775-90d3-3cc3e067ce6d</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Serge+Gainsbourg</url>
+    </artist>
+    <artist rank="46">
+      <name>Cat Stevens</name>
+      <mbid>5adb8b74-54b8-4700-836e-550b6a2a2f71</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Cat+Stevens</url>
+    </artist>
+    <artist rank="47">
+      <name>Melanie</name>
+      <mbid>c8c3beb5-d213-40e6-9ef6-d4e1cad59e12</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Melanie</url>
+    </artist>
+    <artist rank="48">
+      <name>Amsterdam Klezmer Band</name>
+      <mbid>28e27f86-3eba-4e17-9d04-f47b3be48e96</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Amsterdam+Klezmer+Band</url>
+    </artist>
+    <artist rank="49">
+      <name>Sharon Jones and the Dap-Kings</name>
+      <mbid>8d50cd20-34f2-4abe-ba16-0759ee0fb9f5</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Sharon+Jones+and+the+Dap-Kings</url>
+    </artist>
+    <artist rank="50">
+      <name>Bucovina Club Vs Taraf De Haïdouks</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Bucovina+Club+Vs+Taraf+De+Ha%C3%AFdouks</url>
+    </artist>
+    <artist rank="51">
+      <name>Los Lobos</name>
+      <mbid>2b9967c7-3246-4658-a561-ded5408dd9af</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Los+Lobos</url>
+    </artist>
+    <artist rank="52">
+      <name>DJ B</name>
+      <mbid>e3859256-66b7-4235-8f4d-6e59d06f54c3</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/DJ+B</url>
+    </artist>
+    <artist rank="53">
+      <name>Mike &amp; The Mechanics</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Mike+&amp;+The+Mechanics</url>
+    </artist>
+    <artist rank="54">
+      <name>Stratovarius</name>
+      <mbid>c3d6fdd5-67c5-453e-87e3-d17a00a52879</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Stratovarius</url>
+    </artist>
+    <artist rank="55">
+      <name>Gogol Bordello</name>
+      <mbid>f47fc54d-b334-4321-8218-00c5b11d4dd1</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Gogol+Bordello</url>
+    </artist>
+    <artist rank="56">
+      <name>Donna Summer</name>
+      <mbid>00bf0071-e5a2-44d7-bcd1-ad9e8d46e960</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Donna+Summer</url>
+    </artist>
+    <artist rank="57">
+      <name>The Rolling Stones</name>
+      <mbid>b071f9fa-14b0-4217-8e97-eb41da73f598</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/The+Rolling+Stones</url>
+    </artist>
+    <artist rank="58">
+      <name>R.E.M.</name>
+      <mbid>ea4dfa26-f633-4da6-a52a-f49ea4897b58</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/R.E.M.</url>
+    </artist>
+    <artist rank="59">
+      <name>The Jesus and Mary Chain</name>
+      <mbid>e938a15c-b17e-4e7a-9f68-ff0d536cab44</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/The+Jesus+and+Mary+Chain</url>
+    </artist>
+    <artist rank="60">
+      <name>Buena Vista Social Club</name>
+      <mbid>2a85ecff-41e9-4be1-aca6-c87054a4c334</mbid>
+      <playcount>1</playcount>
+      <url>http://www.last.fm/music/Buena+Vista+Social+Club</url>
+    </artist>
+  </weeklyartistchart>
+</lfm>
+
