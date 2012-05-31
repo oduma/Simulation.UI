@@ -13,7 +13,11 @@ namespace Simulation.LastFmDataProvider
     {
         public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
         {
-            throw new NotImplementedException();
+            var requestedWeek = GetAvailableWeeks().First(w => w.WeekNo == weekNo);
+            var url = @"http://ws.audioscrobbler.com/2.0/?method=user." + 
+                ((itemType==ItemType.Artist)?"getweeklyartistchart":"getweeklytrackchart") + 
+                    @"&user=scentmaster&api_key=" + ApiKey;
+            return new WeeklyTop();
         }
 
         public static string ApiKey { get { return "5e625305596ba928b8d8664bd2a95b08"; } }
