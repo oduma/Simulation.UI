@@ -37,5 +37,19 @@ namespace Simulation.LastFmDataProvider
                         NumberOfPlays = a.PlayCount, 
                         Rank = a.Rank }).ToList();
         }
+
+        public static List<TopItem> TransformToTopItems(this List<Track> tracks, int topLength)
+        {
+            return tracks
+                .Take(topLength)
+                .Select(a =>
+                    new TopItem
+                    {
+                        ItemName = a.ArtistName + " - " + a.Name,
+                        ItemType = ItemType.Track,
+                        NumberOfPlays = a.PlayCount,
+                        Rank = a.Rank
+                    }).ToList();
+        }
     }
 }

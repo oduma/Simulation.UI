@@ -25,7 +25,24 @@ namespace Simulation.LastFmDataProvider
 
         private WeeklyTop GetTopbyWeekForTracks(int weekNo, int topLength, bool isWeekProcessed)
         {
-            throw new NotImplementedException();
+            var fileFullPath = ConfigurationManager.AppSettings["TracksDummyFile"];
+
+            if (!File.Exists(fileFullPath))
+                return new WeeklyTop();
+            using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(LfmGetChartTracksResponse));
+                return new WeeklyTop
+                {
+                    ItemType = ItemType.Track,
+                    TopProcessed = isWeekProcessed,
+                    WeekNo = weekNo,
+                    TopItems = (xmlSerializer.Deserialize(fs) as LfmGetChartTracksResponse)
+                        .Tracks.TransformToTopItems(topLength)
+                };
+            }
+
+
         }
 
         private WeeklyTop GetTopByWeekForArtists(int weekNo, int topLength, bool isWeekProcessed)
