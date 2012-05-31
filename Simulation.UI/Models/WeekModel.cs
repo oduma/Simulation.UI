@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Sciendo.Core.Providers.DataTypes;
 
-namespace Sciendo.Core.Providers.DataTypes
+namespace Simulation.UI.Models
 {
     public class WeekModel:Week
     {

@@ -14,7 +14,7 @@ namespace Simulation.UI.Models
             ItemType  = itemType;
         }
 
-        public IEnumerable<Week> AvailableWeeks { get; set; }
+        public IEnumerable<WeekModel> AvailableWeeks { get; set; }
 
         public WeeklyTop FirstWeekTop { get; set; }
 

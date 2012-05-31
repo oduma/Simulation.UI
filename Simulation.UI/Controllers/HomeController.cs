@@ -51,24 +51,6 @@ namespace Simulation.UI.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        [AcceptVerbs(HttpVerbs.Get)]
-        public ActionResult TryAuthorize(string id)
-        {
-            TopProvider topProvider = new TopProvider();
-            string token = "";
-            string error = "";
-            var authorizationToken = topProvider.TryGetAuthorizationToken(out token, out error);
-            ItemType currentItemType;
-            if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
-                throw new ArgumentException("argument id is not an ItemType");
-            //NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
-            //IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            if (authorizationToken)
-                return Json("http://www.last.fm/api/auth/?api_key=" + TopProvider.ApiKey + "&token=" + token, JsonRequestBehavior.AllowGet);
-            else
-                return Json(error, JsonRequestBehavior.AllowGet);
-        }
-
         public ActionResult AddToTotals(string id)
         {
             ItemType currentItemType;
@@ -118,42 +100,20 @@ namespace Simulation.UI.Controllers
                 throw new ArgumentException("argument id is not an ItemType");
 
             WeekSelectionModel weekSelectionModel = new WeekSelectionModel(currentItemType);
-            weekSelectionModel.AvailableWeeks = GetWeeks(DateTime.Now);
+            ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
+            weekSelectionModel.AvailableWeeks = topProvider.GetAvailableWeeks().Select(w => new WeekModel { EndingIn = w.EndingIn, ItemType = currentItemType, StartingFrom = w.StartingFrom,  WeekNo = w.WeekNo });
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var topProcessed = topRecordProvider.GetTopProcessed();
             if (topProcessed.FirstOrDefault(p => p.ItemType == weekSelectionModel.ItemType) != null)
                 weekSelectionModel.NextWeekToProcess = topProcessed.Where(t => t.ItemType == weekSelectionModel.ItemType).Max(t => t.WeekNo) + 1;
             else
                 weekSelectionModel.NextWeekToProcess = 1;
-            ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
             weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, 10, weekSelectionModel.ItemType);
             IAlgorythmPoolProvider algoryhtmProvider=ClientFactory.GetClient<IAlgorythmPoolProvider>();
             weekSelectionModel.Settings = new SettingsModel();
             weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
             weekSelectionModel.CurrentAlgorythm = algoryhtmProvider.GetCurrentAlgorythm(currentItemType);
             return View(weekSelectionModel);
-        }
-
-        private IEnumerable<Week> GetWeeks(DateTime tillNow)
-        {
-            DateTime firstSundayOfTheYear = new DateTime(tillNow.Year, 1, 1);
-            for(int i=0;i<7;i++)
-            {
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(i);
-                if(firstSundayOfTheYear.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    break;
-                }
-            }
-            
-            DateTime endOfWeek=firstSundayOfTheYear.AddDays(6);
-            int weekNo = 1;
-            while (endOfWeek < tillNow)
-            {
-                yield return new Week { WeekNo=weekNo++,StartingFrom=firstSundayOfTheYear,EndingIn=endOfWeek};
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(7);
-                endOfWeek = firstSundayOfTheYear.AddDays(6);
-            }
         }
 
         [AcceptVerbs(HttpVerbs.Get)]

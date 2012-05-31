@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sciendo.Core.Providers;
+using System.Configuration;
 using Sciendo.Core.Providers.DataTypes;
+using System.IO;
+using System.Xml.Serialization;
+using Simulation.LastFmDataProvider.DataTypes;
+using Simulation.DummyDataProvider;
 
-namespace Simulation.DummyDataProvider
+namespace Simulation.LastFmDataProvider
 {
-    public class DummyTopProvider:DummyTopRecordProvider,ITopProvider
+    public class DummyLfmTopProvider : DummyTopRecordProvider,ITopProvider
     {
         public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
         {
@@ -18,6 +23,7 @@ namespace Simulation.DummyDataProvider
             weeklyTop.ItemType = itemType;
             return weeklyTop;
         }
+
 
         private bool IsWeekProcessed(IEnumerable<WeekSummary> topRecordedItems, int weekNo, ItemType itemType)
         {
@@ -33,27 +39,26 @@ namespace Simulation.DummyDataProvider
 
         public IEnumerable<Week> GetAvailableWeeks()
         {
-            DateTime tillNow = DateTime.Now;
+            
+            var fileFullPath = ConfigurationManager.AppSettings["WeeksDummyFile"];
 
-            DateTime firstSundayOfTheYear = new DateTime(tillNow.Year, 1, 1);
-            for (int i = 0; i < 7; i++)
+            if (!File.Exists(fileFullPath))
+                return new List<Week>();
+            using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
             {
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(i);
-                if (firstSundayOfTheYear.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    break;
-                }
-            }
-
-            DateTime endOfWeek = firstSundayOfTheYear.AddDays(6);
-            int weekNo = 1;
-            while (endOfWeek < tillNow)
-            {
-                yield return new Week { WeekNo = weekNo++, StartingFrom = firstSundayOfTheYear, EndingIn = endOfWeek };
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(7);
-                endOfWeek = firstSundayOfTheYear.AddDays(6);
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(LfmGetWeekChartlistResponse));
+                int i = 1;
+                var weeks = (xmlSerializer.Deserialize(fs) as LfmGetWeekChartlistResponse).ChartWeeks
+                    .Where(wr=> new DateTime(1970,1,1).AddSeconds(wr.To).Year==DateTime.Now.Year)
+                    .Select(wr => 
+                    new Week 
+                        { 
+                            EndingIn = new DateTime(1970, 1, 1).AddSeconds(wr.To), 
+                            StartingFrom = new DateTime(1970, 1, 1).AddSeconds(wr.From),
+                            WeekNo=i++
+                        });
+                return weeks;
             }
         }
-
     }
 }
