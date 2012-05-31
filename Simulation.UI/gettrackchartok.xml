@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+  <weeklytrackchart user="scentMaster" from="1337515200" to="1338120000">
+    <track rank="1">
+      <artist mbid="eb00b7d3-149c-4411-8003-5a51c9243442">SaReGaMa</artist>
+      <name>SaReGaMa &amp; Hamelin Bérengnier - Honky Fonky (2007)</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/2126488.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/2126488.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/2126488.jpg</image>
+      <url>www.last.fm/music/SaReGaMa/_/SaReGaMa+&amp;+Hamelin+B%C3%A9rengnier+-+Honky+Fonky+(2007)</url>
+    </track>
+    <track rank="2">
+      <artist mbid="5adb8b74-54b8-4700-836e-550b6a2a2f71">Cat Stevens</artist>
+      <name>The First Cut Is The Deepest</name>
+      <mbid>4d289260-224a-4ace-bdce-8f4c02b80ba7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/21717419.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/21717419.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/21717419.jpg</image>
+      <url>www.last.fm/music/Cat+Stevens/_/The+First+Cut+Is+The+Deepest</url>
+    </track>
+    <track rank="3">
+      <artist mbid="">Natassa Theodoridou</artist>
+      <name>Tora To Thimithikes</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/241441.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/241441.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/241441.jpg</image>
+      <url>www.last.fm/music/Natassa+Theodoridou/_/Tora+To+Thimithikes</url>
+    </track>
+    <track rank="4">
+      <artist mbid="227b39fc-23f6-40f5-b8a1-75100d5baad4">Florence + the Machine</artist>
+      <name>Rabbit Heart (Raise It Up)</name>
+      <mbid>0c597676-cd77-417b-b298-c689fa1f01a7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/52476509.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/52476509.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/52476509.png</image>
+      <url>www.last.fm/music/Florence+%252B+the+Machine/_/Rabbit+Heart+(Raise+It+Up)</url>
+    </track>
+    <track rank="5">
+      <artist mbid="65314b12-0e08-43fa-ba33-baaa7b874c15">Leonard Cohen</artist>
+      <name>True Love Leaves No Traces</name>
+      <mbid>a77d295d-8fc1-4092-995d-79f4cd9ee03d</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/24489039.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/24489039.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/24489039.png</image>
+      <url>www.last.fm/music/Leonard+Cohen/_/True+Love+Leaves+No+Traces</url>
+    </track>
+    <track rank="6">
+      <artist mbid="a98da524-e565-4d89-b729-17d5a5fe75e0">Fanfare Ciocărlia</artist>
+      <name>Alili</name>
+      <mbid>9ac40a3b-9fd1-4f81-b558-bb330148c2e7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/550404.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/550404.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/550404.jpg</image>
+      <url>www.last.fm/music/Fanfare+Cioc%C4%83rlia/_/Alili</url>
+    </track>
+    <track rank="7">
+      <artist mbid="65314b12-0e08-43fa-ba33-baaa7b874c15">Leonard Cohen</artist>
+      <name>The Partisan</name>
+      <mbid>250f88d9-3635-4b57-9d6d-52489f2a5847</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/24489039.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/24489039.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/24489039.png</image>
+      <url>www.last.fm/music/Leonard+Cohen/_/The+Partisan</url>
+    </track>
+    <track rank="8">
+      <artist mbid="0c6df576-8f8b-4837-8a7d-da7f05d70fff">Gandalf</artist>
+      <name>Aquarius</name>
+      <mbid>255f5d92-8e5f-4108-a015-4d4fb37e86be</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/62931487.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/62931487.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/62931487.jpg</image>
+      <url>www.last.fm/music/Gandalf/_/Aquarius</url>
+    </track>
+    <track rank="9">
+      <artist mbid="ea4dfa26-f633-4da6-a52a-f49ea4897b58">R.E.M.</artist>
+      <name>Nightswimming</name>
+      <mbid>ccfa66ee-d187-4c4e-9290-a02f3dcc8590</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/293124.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/293124.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/293124.jpg</image>
+      <url>www.last.fm/music/R.E.M./_/Nightswimming</url>
+    </track>
+    <track rank="10">
+      <artist mbid="9a58fda3-f4ed-4080-a3a5-f457aac9fcdd">Joy Division</artist>
+      <name>Love Will Tear Us Apart</name>
+      <mbid>098fc4c0-74cf-4775-bbb5-ef5c61b7a5af</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/24170413.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/24170413.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/24170413.jpg</image>
+      <url>www.last.fm/music/Joy+Division/_/Love+Will+Tear+Us+Apart</url>
+    </track>
+    <track rank="11">
+      <artist mbid="324b9329-7be6-491f-9ee1-65bfa10c7577">Mercedes Sosa</artist>
+      <name>Vientos Del Alma</name>
+      <mbid>ba014648-e571-4e13-b115-26178eeb1880</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/9136047.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/9136047.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/9136047.jpg</image>
+      <url>www.last.fm/music/Mercedes+Sosa/_/Vientos+Del+Alma</url>
+    </track>
+    <track rank="12">
+      <artist mbid="c7423e0c-ab3e-4ab4-be10-cdff5a9d3062">Blue Öyster Cult</artist>
+      <name>(Don't Fear) The Reaper</name>
+      <mbid>cbc8f170-c6b9-4667-8159-c7bdf2ee5668</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/51996313.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/51996313.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/51996313.png</image>
+      <url>www.last.fm/music/Blue+%C3%96yster+Cult/_/(Don't+Fear)+The+Reaper</url>
+    </track>
+    <track rank="13">
+      <artist mbid="401c3991-b76b-499d-8082-9f2df958ef78">Phil Collins</artist>
+      <name>Sussudio</name>
+      <mbid>7f402071-73af-4d7b-8902-845a2a5b3412</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/529942.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/529942.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/529942.jpg</image>
+      <url>www.last.fm/music/Phil+Collins/_/Sussudio</url>
+    </track>
+    <track rank="14">
+      <artist mbid="61f62beb-56e6-4206-b06c-8e1168931007">Captain Beefheart &amp; His Magic Band</artist>
+      <name>Well</name>
+      <mbid>ceea16ed-5a30-40a8-bb1b-233792cc45bb</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/33270855.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/33270855.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/33270855.jpg</image>
+      <url>www.last.fm/music/Captain+Beefheart+&amp;+His+Magic+Band/_/Well</url>
+    </track>
+    <track rank="15">
+      <artist mbid="4d8afa16-4018-4ca8-8b5e-ede8f9314562">The Animals</artist>
+      <name>The House of the Rising Sun</name>
+      <mbid>6bc95cd1-0e35-4d6f-a1cc-bcf26632dc4e</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/2643591.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/2643591.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/2643591.jpg</image>
+      <url>www.last.fm/music/The+Animals/_/The+House+of+the+Rising+Sun</url>
+    </track>
+    <track rank="16">
+      <artist mbid="e3859256-66b7-4235-8f4d-6e59d06f54c3">DJ B</artist>
+      <name>Mamut Sultan (Qaytarma)</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/35704201.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/35704201.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/35704201.jpg</image>
+      <url>www.last.fm/music/DJ+B/_/Mamut+Sultan+(Qaytarma)</url>
+    </track>
+    <track rank="17">
+      <artist mbid="e938a15c-b17e-4e7a-9f68-ff0d536cab44">The Jesus and Mary Chain</artist>
+      <name>Happy When It Rains</name>
+      <mbid>316c4be2-9a77-44b6-af6b-6d812c7bfe97</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/40916019.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/40916019.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/40916019.jpg</image>
+      <url>www.last.fm/music/The+Jesus+and+Mary+Chain/_/Happy+When+It+Rains</url>
+    </track>
+    <track rank="18">
+      <artist mbid="c3d6fdd5-67c5-453e-87e3-d17a00a52879">Stratovarius</artist>
+      <name>Hunting High And Low</name>
+      <mbid>6beb0eae-8b21-4816-ac0a-26afd513095e</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/17528721.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/17528721.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/17528721.jpg</image>
+      <url>www.last.fm/music/Stratovarius/_/Hunting+High+And+Low</url>
+    </track>
+    <track rank="19">
+      <artist mbid="000fc734-b7e1-4a01-92d1-f544261b43f5">Cocteau Twins</artist>
+      <name>Little Spacey</name>
+      <mbid>5c8b834a-bbc6-4448-8f30-e78b529a7e45</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/44253889.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/44253889.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/44253889.jpg</image>
+      <url>www.last.fm/music/Cocteau+Twins/_/Little+Spacey</url>
+    </track>
+    <track rank="20">
+      <artist mbid="">Vino lubirea Mea (!DelaDap Remix)</artist>
+      <name>Eastenders</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small"></image>
+      <image size="medium"></image>
+      <image size="large"></image>
+      <url>www.last.fm/music/Vino+lubirea+Mea+(!DelaDap+Remix)/_/Eastenders</url>
+    </track>
+    <track rank="21">
+      <artist mbid="1c378393-f5b8-4794-83b1-cb4c71b6a665">Florin Bogardo</artist>
+      <name>Sa Nu Uitam Trandafirii</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/68241906.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/68241906.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/68241906.jpg</image>
+      <url>www.last.fm/music/Florin+Bogardo/_/Sa+Nu+Uitam+Trandafirii</url>
+    </track>
+    <track rank="22">
+      <artist mbid="67468e38-0c90-4318-b2d2-0c18b7b1e144">Deep Forest</artist>
+      <name>Freedom Cry</name>
+      <mbid>c4058bd8-ea2e-4075-80e8-129ee6537ce7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/347830.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/347830.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/347830.jpg</image>
+      <url>www.last.fm/music/Deep+Forest/_/Freedom+Cry</url>
+    </track>
+    <track rank="23">
+      <artist mbid="5b8a28ee-dc6b-48db-ae98-f4ef1f15ae6d">Serge Gainsbourg</artist>
+      <name>Ballade De Melody Nelson</name>
+      <mbid>2e76204b-8266-4cd2-bdda-60512cdb670f</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/52389543.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/52389543.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/52389543.png</image>
+      <url>www.last.fm/music/Serge+Gainsbourg/_/Ballade+De+Melody+Nelson</url>
+    </track>
+    <track rank="24">
+      <artist mbid="1ab25513-48b8-4bed-a226-f468da6e7142">Adriano Celentano</artist>
+      <name>Susanna</name>
+      <mbid>5c23ac10-bd3d-4720-be3b-76f910db0b91</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/38851193.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/38851193.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/38851193.jpg</image>
+      <url>www.last.fm/music/Adriano+Celentano/_/Susanna</url>
+    </track>
+    <track rank="25">
+      <artist mbid="00ed154e-8679-42f0-8f42-e59bd7e185af">Zucchero</artist>
+      <name>Cosi Celeste with Cheb Mami</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/461997.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/461997.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/461997.jpg</image>
+      <url>www.last.fm/music/Zucchero/_/Cosi+Celeste+with+Cheb+Mami</url>
+    </track>
+    <track rank="26">
+      <artist mbid="f47fc54d-b334-4321-8218-00c5b11d4dd1">Gogol Bordello</artist>
+      <name>Start Wearing Purple</name>
+      <mbid>ffddb11e-31ec-45fd-9edd-9ad7ef4bdb70</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/41496831.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/41496831.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/41496831.png</image>
+      <url>www.last.fm/music/Gogol+Bordello/_/Start+Wearing+Purple</url>
+    </track>
+    <track rank="27">
+      <artist mbid="a4e2650b-938b-4b72-95bc-6e229cd34601">Ry Cooder</artist>
+      <name>Volver, Volver</name>
+      <mbid>09650033-089a-4c33-9c35-c72d3aad54b8</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/38779381.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/38779381.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/38779381.png</image>
+      <url>www.last.fm/music/Ry+Cooder/_/Volver,+Volver</url>
+    </track>
+    <track rank="28">
+      <artist mbid="f23f6dd0-bfb0-43d5-bf06-eae4315db502">Paloma Faith</artist>
+      <name>Do You Want The Truth Or Something Beautiful?</name>
+      <mbid>491e74bf-59ba-41aa-b0c7-09f759ed2be7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/78062392.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/78062392.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/78062392.png</image>
+      <url>www.last.fm/music/Paloma+Faith/_/Do+You+Want+The+Truth+Or+Something+Beautiful%3F</url>
+    </track>
+    <track rank="29">
+      <artist mbid="31c3d2e1-da2c-455c-9319-1bdcc22741a7">Taj Mahal</artist>
+      <name>Queen Bee</name>
+      <mbid>8d2535b5-b631-48cc-9360-2f923e84d6cc</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/45691835.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/45691835.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/45691835.jpg</image>
+      <url>www.last.fm/music/Taj+Mahal/_/Queen+Bee</url>
+    </track>
+    <track rank="30">
+      <artist mbid="9a58fda3-f4ed-4080-a3a5-f457aac9fcdd">Joy Division</artist>
+      <name>A Means To An End</name>
+      <mbid>ec3e018b-aa63-4589-8178-2ced1392bf07</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/24170413.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/24170413.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/24170413.jpg</image>
+      <url>www.last.fm/music/Joy+Division/_/A+Means+To+An+End</url>
+    </track>
+    <track rank="31">
+      <artist mbid="4a5777b3-f55b-437c-8b23-d9ee7791c7fc">Eagle-Eye Cherry</artist>
+      <name>Save Tonight</name>
+      <mbid>626e3990-8acf-454c-bdba-2bc6e2ac6c37</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/10958235.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/10958235.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/10958235.jpg</image>
+      <url>www.last.fm/music/Eagle-Eye+Cherry/_/Save+Tonight</url>
+    </track>
+    <track rank="32">
+      <artist mbid="">John Cooper-Clarke</artist>
+      <name>Reader's Wives</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/216809.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/216809.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/216809.jpg</image>
+      <url>www.last.fm/music/John+Cooper-Clarke/_/Reader's+Wives</url>
+    </track>
+    <track rank="33">
+      <artist mbid="61f62beb-56e6-4206-b06c-8e1168931007">Captain Beefheart &amp; His Magic Band</artist>
+      <name>Orange Claw Hammer</name>
+      <mbid>20e94999-55b7-4b7f-bd8c-59b997233bc5</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/33270855.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/33270855.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/33270855.jpg</image>
+      <url>www.last.fm/music/Captain+Beefheart+&amp;+His+Magic+Band/_/Orange+Claw+Hammer</url>
+    </track>
+    <track rank="34">
+      <artist mbid="053e3289-1cab-4b44-9535-9ab1beb3b207">Neil Young</artist>
+      <name>Harvest Moon</name>
+      <mbid>c15683d6-f591-43f9-bd65-16ebd4d03b77</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/8663897.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/8663897.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/8663897.jpg</image>
+      <url>www.last.fm/music/Neil+Young/_/Harvest+Moon</url>
+    </track>
+    <track rank="35">
+      <artist mbid="bd13909f-1c29-4c27-a874-d4aaf27c5b1a">Fleetwood Mac</artist>
+      <name>I Don't Wanna Know</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/238883.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/238883.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/238883.jpg</image>
+      <url>www.last.fm/music/Fleetwood+Mac/_/I+Don't+Wanna+Know</url>
+    </track>
+    <track rank="36">
+      <artist mbid="8d50cd20-34f2-4abe-ba16-0759ee0fb9f5">Sharon Jones and the Dap-Kings</artist>
+      <name>100 Days, 100 Nights</name>
+      <mbid>7bc4c3d9-2fbd-438f-ac7a-9a41f7d5a2de</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/67002836.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/67002836.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/67002836.png</image>
+      <url>www.last.fm/music/Sharon+Jones+and+the+Dap-Kings/_/100+Days,+100+Nights</url>
+    </track>
+    <track rank="37">
+      <artist mbid="9a7c8025-1af8-42cd-8df8-857220610bc5">Spyro Gyra</artist>
+      <name>Morning Dance</name>
+      <mbid>cb5bec6a-39ef-469a-b7ec-6d54b4998a3a</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/2343560.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/2343560.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/2343560.jpg</image>
+      <url>www.last.fm/music/Spyro+Gyra/_/Morning+Dance</url>
+    </track>
+    <track rank="38">
+      <artist mbid="0c502791-4ee9-4c5f-9696-0602b721ff3b">Electric Light Orchestra</artist>
+      <name>Last Train To London</name>
+      <mbid>658889c4-04ed-462d-a0e7-5835333a9b45</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/58911519.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/58911519.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/58911519.png</image>
+      <url>www.last.fm/music/Electric+Light+Orchestra/_/Last+Train+To+London</url>
+    </track>
+    <track rank="39">
+      <artist mbid="475b7312-4fcb-49a4-8bcc-cf3a679b255a">Joe Dassin</artist>
+      <name>Le Jardin du Luxembourg</name>
+      <mbid>44ae519a-a657-48a4-a679-7bc862df71c1</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/3129425.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/3129425.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/3129425.jpg</image>
+      <url>www.last.fm/music/Joe+Dassin/_/Le+Jardin+du+Luxembourg</url>
+    </track>
+    <track rank="40">
+      <artist mbid="b071f9fa-14b0-4217-8e97-eb41da73f598">The Rolling Stones</artist>
+      <name>Honky Tonk Women</name>
+      <mbid>dbaad66b-905b-4b3c-b913-4ad845d06ec4</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/6720255.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/6720255.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/6720255.jpg</image>
+      <url>www.last.fm/music/The+Rolling+Stones/_/Honky+Tonk+Women</url>
+    </track>
+    <track rank="41">
+      <artist mbid="235c5cb3-511c-4717-8a2c-bc0fa5899318">Sonny Rollins</artist>
+      <name>The Night Has A Thousand Eyes</name>
+      <mbid>dec1f91b-57e4-4921-b41a-776d10661b19</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/62268705.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/62268705.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/62268705.png</image>
+      <url>www.last.fm/music/Sonny+Rollins/_/The+Night+Has+A+Thousand+Eyes</url>
+    </track>
+    <track rank="42">
+      <artist mbid="">Bucovina Club Vs Taraf De Haïdouks</artist>
+      <name>Carolina</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/51122807.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/51122807.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/51122807.jpg</image>
+      <url>www.last.fm/music/Bucovina+Club+Vs+Taraf+De+Ha%C3%AFdouks/_/Carolina</url>
+    </track>
+    <track rank="43">
+      <artist mbid="a55c2f1b-3f3f-4d6a-aa30-5e186dbadce6">Suede</artist>
+      <name>My Dark Star</name>
+      <mbid>4f19198e-6835-4d18-a7a1-71da941a9669</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/425235.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/425235.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/425235.jpg</image>
+      <url>www.last.fm/music/Suede/_/My+Dark+Star</url>
+    </track>
+    <track rank="44">
+      <artist mbid="">Mike &amp; The Mechanics</artist>
+      <name>Another Cup of Coffee</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/57142699.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/57142699.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/57142699.png</image>
+      <url>www.last.fm/music/Mike+&amp;+The+Mechanics/_/Another+Cup+of+Coffee</url>
+    </track>
+    <track rank="45">
+      <artist mbid="69a5a5ae-d8b0-44e5-94ef-8973b374da84">Luca Carboni</artist>
+      <name>Mi Ami Davvero</name>
+      <mbid>2d9066e8-1149-489b-aa16-586676ff41bf</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/72342448.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/72342448.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/72342448.jpg</image>
+      <url>www.last.fm/music/Luca+Carboni/_/Mi+Ami+Davvero</url>
+    </track>
+    <track rank="46">
+      <artist mbid="">Doru Stanculescu</artist>
+      <name>Ecou</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/10962711.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/10962711.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/10962711.jpg</image>
+      <url>www.last.fm/music/Doru+Stanculescu/_/Ecou</url>
+    </track>
+    <track rank="47">
+      <artist mbid="a55c2f1b-3f3f-4d6a-aa30-5e186dbadce6">Suede</artist>
+      <name>She's In Fashion</name>
+      <mbid>234a9759-7964-4b6b-865e-d82e31f23f67</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/425235.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/425235.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/425235.jpg</image>
+      <url>www.last.fm/music/Suede/_/She's+In+Fashion</url>
+    </track>
+    <track rank="48">
+      <artist mbid="112ea791-90a5-4665-af51-93ce47dc503b">Genesis</artist>
+      <name>In Too Deep</name>
+      <mbid>70af5c2c-eadb-40d2-a96e-b57ce794e036</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/57849673.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/57849673.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/57849673.png</image>
+      <url>www.last.fm/music/Genesis/_/In+Too+Deep</url>
+    </track>
+    <track rank="49">
+      <artist mbid="">Gudrid Hansdottir</artist>
+      <name>Stjornur</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/67286988.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/67286988.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/67286988.jpg</image>
+      <url>www.last.fm/music/Gudrid+Hansdottir/_/Stjornur</url>
+    </track>
+    <track rank="50">
+      <artist mbid="28e27f86-3eba-4e17-9d04-f47b3be48e96">Amsterdam Klezmer Band</artist>
+      <name>Sadagora Hot Tub</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/23849113.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/23849113.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/23849113.jpg</image>
+      <url>www.last.fm/music/Amsterdam+Klezmer+Band/_/Sadagora+Hot+Tub</url>
+    </track>
+    <track rank="51">
+      <artist mbid="3be4099e-f180-4038-af84-ae18a09eab02">Julio Iglesias</artist>
+      <name>Begin the Beguine</name>
+      <mbid>490eb12d-c20d-4025-9aa8-302ab938fa71</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/60244009.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/60244009.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/60244009.png</image>
+      <url>www.last.fm/music/Julio+Iglesias/_/Begin+the+Beguine</url>
+    </track>
+    <track rank="52">
+      <artist mbid="bd13909f-1c29-4c27-a874-d4aaf27c5b1a">Fleetwood Mac</artist>
+      <name>Albatross</name>
+      <mbid>fff8191c-5360-414c-83bf-f2b09f359f42</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/238883.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/238883.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/238883.jpg</image>
+      <url>www.last.fm/music/Fleetwood+Mac/_/Albatross</url>
+    </track>
+    <track rank="53">
+      <artist mbid="ad996aef-cc1c-42ac-af5c-619c370f4b8a">Emerson, Lake &amp; Palmer</artist>
+      <name>C'est La Vie</name>
+      <mbid>087f363e-cfd3-4c30-84f1-ae4682f0c228</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/37243379.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/37243379.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/37243379.png</image>
+      <url>www.last.fm/music/Emerson,+Lake+&amp;+Palmer/_/C'est+La+Vie</url>
+    </track>
+    <track rank="54">
+      <artist mbid="69a5a5ae-d8b0-44e5-94ef-8973b374da84">Luca Carboni</artist>
+      <name>L'Amore Non Lo Sa</name>
+      <mbid>c1a3de54-a7a3-447b-b2c8-5addbb3585f1</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/72342448.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/72342448.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/72342448.jpg</image>
+      <url>www.last.fm/music/Luca+Carboni/_/L'Amore+Non+Lo+Sa</url>
+    </track>
+    <track rank="55">
+      <artist mbid="2a85ecff-41e9-4be1-aca6-c87054a4c334">Buena Vista Social Club</artist>
+      <name>Chan Chan</name>
+      <mbid>33897aec-89c8-4eca-8dc2-0e5fdcfa6ed9</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/2591611.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/2591611.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/2591611.jpg</image>
+      <url>www.last.fm/music/Buena+Vista+Social+Club/_/Chan+Chan</url>
+    </track>
+    <track rank="56">
+      <artist mbid="631c0ad8-764b-4717-897f-616cf360cd43">Melanie</artist>
+      <name>Ruby Tuesday</name>
+      <mbid>f620447f-dcb0-4c28-8229-68cd31a5b0d6</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/5937548.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/5937548.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/5937548.jpg</image>
+      <url>www.last.fm/music/Melanie/_/Ruby+Tuesday</url>
+    </track>
+    <track rank="57">
+      <artist mbid="61f62beb-56e6-4206-b06c-8e1168931007">Captain Beefheart &amp; His Magic Band</artist>
+      <name>Pachuco Cadaver</name>
+      <mbid>2412d460-d5d2-4077-893b-bb8c9729f7ce</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/33270855.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/33270855.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/33270855.jpg</image>
+      <url>www.last.fm/music/Captain+Beefheart+&amp;+His+Magic+Band/_/Pachuco+Cadaver</url>
+    </track>
+    <track rank="58">
+      <artist mbid="b6b2bb8d-54a9-491f-9607-7b546023b433">Pixies</artist>
+      <name>Wave of Mutilation</name>
+      <mbid>20bb572d-3596-4d11-8302-3bdbaa79cf92</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/195353.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/195353.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/195353.jpg</image>
+      <url>www.last.fm/music/Pixies/_/Wave+of+Mutilation</url>
+    </track>
+    <track rank="59">
+      <artist mbid="8fc0c1d2-9be0-464f-98ee-ae7ae5b0086b">Roy Harper</artist>
+      <name>She's The One</name>
+      <mbid>f447baee-9226-4fc7-bd5d-4c725ae1a904</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/6911207.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/6911207.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/6911207.jpg</image>
+      <url>www.last.fm/music/Roy+Harper/_/She's+The+One</url>
+    </track>
+    <track rank="60">
+      <artist mbid="00bf0071-e5a2-44d7-bcd1-ad9e8d46e960">Donna Summer</artist>
+      <name>Hot Stuff</name>
+      <mbid>c99266a0-a7f3-413b-93b6-0d86b5ffc982</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/28390425.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/28390425.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/28390425.png</image>
+      <url>www.last.fm/music/Donna+Summer/_/Hot+Stuff</url>
+    </track>
+    <track rank="61">
+      <artist mbid="e162b2eb-6a42-4240-8c1b-c94d9a0acb73">CocoRosie</artist>
+      <name>Tekno Love Song</name>
+      <mbid>c1b503e9-a4d7-43d2-97c8-80da06b78284</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/44762469.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/44762469.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/44762469.png</image>
+      <url>www.last.fm/music/CocoRosie/_/Tekno+Love+Song</url>
+    </track>
+    <track rank="62">
+      <artist mbid="7b7b1e6f-e73e-41a0-9d72-8f0b30c6992d">Chumbawamba</artist>
+      <name>Bankrobber</name>
+      <mbid>416e8da3-8462-4562-bb30-75932d086e60</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/30263955.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/30263955.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/30263955.png</image>
+      <url>www.last.fm/music/Chumbawamba/_/Bankrobber</url>
+    </track>
+    <track rank="63">
+      <artist mbid="">Los Lobos &amp; Antonio Banderas</artist>
+      <name>Cancion Del Mariachi (Morena De Mi Corazon)</name>
+      <mbid>594ecf8e-1315-40cf-81ef-3729ebbd8a88</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/22992663.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/22992663.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/22992663.jpg</image>
+      <url>www.last.fm/music/Los+Lobos+&amp;+Antonio+Banderas/_/Cancion+Del+Mariachi+(Morena+De+Mi+Corazon)</url>
+    </track>
+    <track rank="64">
+      <artist mbid="373b3663-ecc3-40c4-9241-838ae8ca34d0">Jovanotti</artist>
+      <name>La Valigia</name>
+      <mbid>4c8975dc-8c9c-47b2-ba8a-596c6921420b</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/57724957.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/57724957.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/57724957.png</image>
+      <url>www.last.fm/music/Jovanotti/_/La+Valigia</url>
+    </track>
+    <track rank="65">
+      <artist mbid="46193c80-959a-499d-b42f-f33ba7b9b18e">Vanessa Paradis</artist>
+      <name>Joe Le Taxi</name>
+      <mbid>7673eed0-0f56-4197-a4fc-a76a010f134a</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/58996729.png</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/58996729.png</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/58996729.png</image>
+      <url>www.last.fm/music/Vanessa+Paradis/_/Joe+Le+Taxi</url>
+    </track>
+    <track rank="66">
+      <artist mbid="2b9967c7-3246-4658-a561-ded5408dd9af">Los Lobos</artist>
+      <name>La Bamba</name>
+      <mbid>6787b3dd-5e3c-4d3c-a4e3-583d8ba72543</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/33087873.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/33087873.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/33087873.jpg</image>
+      <url>www.last.fm/music/Los+Lobos/_/La+Bamba</url>
+    </track>
+    <track rank="67">
+      <artist mbid="89cff3da-3f51-4de3-9690-058950ae2850">Dan Andrei Aldea</artist>
+      <name>Cantecul bufonului</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/37047615.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/37047615.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/37047615.jpg</image>
+      <url>www.last.fm/music/Dan+Andrei+Aldea/_/Cantecul+bufonului</url>
+    </track>
+  </weeklytrackchart>
+</lfm>

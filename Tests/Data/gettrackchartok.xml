@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lfm status="ok">
+  <weeklytrackchart user="scentMaster" from="1337515200" to="1338120000">
+    <track rank="1">
+      <artist mbid="eb00b7d3-149c-4411-8003-5a51c9243442">SaReGaMa</artist>
+      <name>SaReGaMa &amp; Hamelin Bérengnier - Honky Fonky (2007)</name>
+      <mbid></mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/2126488.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/2126488.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/2126488.jpg</image>
+      <url>www.last.fm/music/SaReGaMa/_/SaReGaMa+&amp;+Hamelin+B%C3%A9rengnier+-+Honky+Fonky+(2007)</url>
+    </track>
+    <track rank="2">
+      <artist mbid="5adb8b74-54b8-4700-836e-550b6a2a2f71">Cat Stevens</artist>
+      <name>The First Cut Is The Deepest</name>
+      <mbid>4d289260-224a-4ace-bdce-8f4c02b80ba7</mbid>
+      <playcount>1</playcount>
+      <image size="small">http://userserve-ak.last.fm/serve/34/21717419.jpg</image>
+      <image size="medium">http://userserve-ak.last.fm/serve/64/21717419.jpg</image>
+      <image size="large">http://userserve-ak.last.fm/serve/126/21717419.jpg</image>
+      <url>www.last.fm/music/Cat+Stevens/_/The+First+Cut+Is+The+Deepest</url>
+    </track>
+  </weeklytrackchart>
+</lfm>
