@@ -4,6 +4,15 @@
     <Rank>0</Rank>
     <Position>1</Position>
     <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Captain Beefheart &amp; His Magic Band</ItemName>
+    <ItemType>Artist</ItemType>
+    <Score>6</Score>
+    <EntryWeek>3</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>0</Rank>
+    <Position>2</Position>
+    <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist1</ItemName>
     <ItemType>Artist</ItemType>
     <Score>6</Score>
@@ -11,7 +20,7 @@
   </TopItem>
   <TopItem>
     <Rank>0</Rank>
-    <Position>2</Position>
+    <Position>3</Position>
     <NumberOfPlays>0</NumberOfPlays>
     <ItemName>Artist2</ItemName>
     <ItemType>Artist</ItemType>
@@ -20,27 +29,18 @@
   </TopItem>
   <TopItem>
     <Rank>0</Rank>
-    <Position>3</Position>
-    <NumberOfPlays>0</NumberOfPlays>
-    <ItemName>Captain Beefheart &amp; His Magic Band</ItemName>
-    <ItemType>Artist</ItemType>
-    <Score>3</Score>
-    <EntryWeek>3</EntryWeek>
-  </TopItem>
-  <TopItem>
-    <Rank>0</Rank>
     <Position>4</Position>
     <NumberOfPlays>0</NumberOfPlays>
-    <ItemName>Artist3</ItemName>
+    <ItemName>Luca Carboni</ItemName>
     <ItemType>Artist</ItemType>
-    <Score>2</Score>
-    <EntryWeek>1</EntryWeek>
+    <Score>4</Score>
+    <EntryWeek>3</EntryWeek>
   </TopItem>
   <TopItem>
     <Rank>0</Rank>
     <Position>5</Position>
     <NumberOfPlays>0</NumberOfPlays>
-    <ItemName>Luca Carboni</ItemName>
+    <ItemName>Suede</ItemName>
     <ItemType>Artist</ItemType>
     <Score>2</Score>
     <EntryWeek>3</EntryWeek>
@@ -49,9 +49,9 @@
     <Rank>0</Rank>
     <Position>6</Position>
     <NumberOfPlays>0</NumberOfPlays>
-    <ItemName>Suede</ItemName>
+    <ItemName>Artist3</ItemName>
     <ItemType>Artist</ItemType>
-    <Score>1</Score>
-    <EntryWeek>3</EntryWeek>
+    <Score>2</Score>
+    <EntryWeek>1</EntryWeek>
   </TopItem>
 </ArrayOfTopItem>

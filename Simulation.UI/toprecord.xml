@@ -15,4 +15,14 @@
     <TopProcessed>false</TopProcessed>
     <ItemType>Artist</ItemType>
   </WeekSummary>
+  <WeekSummary>
+    <WeekNo>1</WeekNo>
+    <TopProcessed>false</TopProcessed>
+    <ItemType>Track</ItemType>
+  </WeekSummary>
+  <WeekSummary>
+    <WeekNo>4</WeekNo>
+    <TopProcessed>false</TopProcessed>
+    <ItemType>Artist</ItemType>
+  </WeekSummary>
 </ArrayOfWeekSummary>

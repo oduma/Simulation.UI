@@ -82,12 +82,12 @@
                 }
             }
             </span>
-            <ul id="@string.Concat("TopWeek", week.WeekNo)">
+            <ul id="@string.Concat("TopWeek", week.WeekNo)" class="topWeek">
             @if (week.WeekNo == Model.NextWeekToProcess)
             {
                 foreach (Sciendo.Core.Providers.DataTypes.TopItem topItem in Model.FirstWeekTop.TopItems)
                 {
-                    <li class="topItem" id="@string.Concat("li", week.WeekNo.ToString() + topItem.Rank.ToString())"><span>@topItem.Rank</span><span>@topItem.Position</span>
+                    <li class="topItem" id="@string.Concat("li", week.WeekNo.ToString() + topItem.Rank.ToString())"><span>@topItem.Rank</span>
                     <span id="@string.Concat("w"+week.WeekNo, "i" + topItem.Rank)">@topItem.ItemName</span>
                     <span>(@topItem.NumberOfPlays)</span></li>     
                 }

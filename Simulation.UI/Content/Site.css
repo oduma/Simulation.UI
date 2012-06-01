@@ -183,6 +183,7 @@ a
     list-style-type:none;
     padding:10px 10px 10px 10px;
     opacity:0.4;
+    font-size:80%;
 }
 
 .topItem span
@@ -214,4 +215,10 @@ a
 {
     float:right;
     display:block;
+}
+
+.topWeek
+{
+    list-style-position:inside;
+    list-style-image:none;
 }

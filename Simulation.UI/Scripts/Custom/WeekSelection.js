@@ -118,7 +118,7 @@ function printTop(weeklyTop) {
     var topItems = weeklyTop.TopItems;
     $.each(topItems, function (i) {
         if ($("#li" + weeklyTop.WeekNo + weeklyTop.TopItems[i].Rank).length <= 0) {
-            $("#TopWeek" + weeklyTop.WeekNo).append("<li class='topItem' id='li" + weeklyTop.WeekNo + topItems[i].Rank + "'><span>" + topItems[i].Rank + "</span><span>" + topItems[i].Position + "</span><span id='w" +weeklyTop.WeekNo + "i" + topItems[i].Rank + "'>" + topItems[i].ItemName + "</span><span>(" + topItems[i].NumberOfPlays + ")</span></li>");
+            $("#TopWeek" + weeklyTop.WeekNo).append("<li class='topItem' id='li" + weeklyTop.WeekNo + topItems[i].Rank + "'><span>" + topItems[i].Rank + "</span><span id='w" +weeklyTop.WeekNo + "i" + topItems[i].Rank + "'>" + topItems[i].ItemName + "</span><span>(" + topItems[i].NumberOfPlays + ")</span></li>");
         }
     });
 }
