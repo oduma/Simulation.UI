@@ -51,5 +51,11 @@ namespace Simulation.DummyDataProvider
             List<WeekSummary> remainingListSummaries = GetTopProcessed().Where(w => w.ItemType != itemType).ToList();
             Save(remainingListSummaries);
         }
+
+        protected bool IsWeekProcessed(IEnumerable<WeekSummary> topRecordedItems, int weekNo, ItemType itemType)
+        {
+            return topRecordedItems.FirstOrDefault(r => r.WeekNo == weekNo && r.ItemType.ToString().ToLower() == itemType.ToString().ToLower()) != null;
+        }
+
     }
 }

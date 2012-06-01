@@ -62,10 +62,6 @@ namespace Simulation.LastFmDataProvider
         }
 
 
-        private bool IsWeekProcessed(IEnumerable<WeekSummary> topRecordedItems, int weekNo, ItemType itemType)
-        {
-            return topRecordedItems.FirstOrDefault(r => r.WeekNo == weekNo && r.ItemType.ToString().ToLower() == itemType.ToString().ToLower()) != null;
-        }
 
         public IEnumerable<Week> GetAvailableWeeks()
         {
