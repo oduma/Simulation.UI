@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CacheProviderTests.cs" />
     <Compile Include="LastFmRequestsResponsesTests.cs" />
+    <Compile Include="Mocks\IMockClassUsingCache.cs" />
+    <Compile Include="Mocks\MockCacheManager.cs" />
+    <Compile Include="Mocks\MockClassUsingCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

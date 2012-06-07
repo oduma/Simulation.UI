@@ -63,7 +63,7 @@ namespace Simulation.LastFmDataProvider
 
 
 
-        public IEnumerable<Week> GetAvailableWeeks()
+        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
         {
             
             var fileFullPath = ConfigurationManager.AppSettings["WeeksDummyFile"];

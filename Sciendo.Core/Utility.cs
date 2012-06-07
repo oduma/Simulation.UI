@@ -25,5 +25,28 @@ namespace Sciendo.Core
 
             return new UTF8Encoding().GetString(ms.GetBuffer());
         }
+
+        public static int LastWeekNo(DateTime today)
+        {
+            DateTime firstSundayOfTheYear = new DateTime(today.Year, 1, 1);
+            for (int i = 0; i < 7; i++)
+            {
+                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(i);
+                if (firstSundayOfTheYear.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    break;
+                }
+            }
+
+            DateTime endOfWeek = firstSundayOfTheYear.AddDays(6);
+            int weekNo = 1;
+            while (endOfWeek < today)
+            {
+                weekNo++;
+                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(7);
+                endOfWeek = firstSundayOfTheYear.AddDays(6);
+            }
+            return weekNo;
+        }
     }
 }

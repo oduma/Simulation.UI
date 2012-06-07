@@ -7,14 +7,19 @@ using Sciendo.Core.Providers.DataTypes;
 using Sciendo.Core;
 using Simulation.LastFmDataProvider.DataTypes;
 using Simulation.DummyDataProvider;
+using Sciendo.Core.CacheManager;
 
 namespace Simulation.LastFmDataProvider
 {
     public class TopProvider:DummyTopRecordProvider, ITopProvider
     {
+        [CacheKey(false, "weekNo","itemType")]
         public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
         {
-            var requestedWeek = GetAvailableWeeks().First(w => w.WeekNo == weekNo);
+            var availableWeeks = GetAvailableWeeks(Utility.LastWeekNo(DateTime.Now));
+            if (availableWeeks == null)
+                return null;
+            var requestedWeek = availableWeeks.First(w => w.WeekNo == weekNo);
             requestedWeek.TopProcessed=IsWeekProcessed(GetTopProcessed(), weekNo, itemType);
             if (itemType == ItemType.Artist)
                 return GetTopByWeekForArtists(requestedWeek, topLength);
@@ -63,10 +68,13 @@ namespace Simulation.LastFmDataProvider
 
         public static string ApiKey { get { return "5e625305596ba928b8d8664bd2a95b08"; } }
 
-        public IEnumerable<Week> GetAvailableWeeks()
+        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
         {
             var url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklychartlist&user=scentmaster&api_key=" + ApiKey;
-            return Utility.Deserialize<LfmGetWeekChartlistResponse>(HttpHelper.Get(url)).ChartWeeks.TransformToWeeks();
+            var lfmString = HttpHelper.Get(url);
+            if (string.IsNullOrEmpty(lfmString))
+                return null;
+            return Utility.Deserialize<LfmGetWeekChartlistResponse>(lfmString).ChartWeeks.TransformToWeeks();
         }
     }
 }

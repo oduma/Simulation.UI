@@ -101,7 +101,11 @@ namespace Simulation.UI.Controllers
 
             WeekSelectionModel weekSelectionModel = new WeekSelectionModel(currentItemType);
             ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
-            weekSelectionModel.AvailableWeeks = topProvider.GetAvailableWeeks().Select(w => new WeekModel { EndingIn = w.EndingIn, ItemType = currentItemType, StartingFrom = w.StartingFrom,  WeekNo = w.WeekNo });
+            var availableWeeks = topProvider.GetAvailableWeeks(Utility.LastWeekNo(DateTime.Now));
+            if(availableWeeks!=null)
+                weekSelectionModel.AvailableWeeks = availableWeeks.Select(w => new WeekModel { EndingIn = w.EndingIn, ItemType = currentItemType, StartingFrom = w.StartingFrom,  WeekNo = w.WeekNo });
+            else
+                weekSelectionModel.AvailableWeeks=new WeekModel[] {};
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var topProcessed = topRecordProvider.GetTopProcessed();
             if (topProcessed.FirstOrDefault(p => p.ItemType == weekSelectionModel.ItemType) != null)

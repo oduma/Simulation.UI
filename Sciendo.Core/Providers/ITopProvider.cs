@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sciendo.Core.Providers.DataTypes;
+using Sciendo.Core.CacheManager;
 
 namespace Sciendo.Core.Providers
 {
@@ -10,6 +11,7 @@ namespace Sciendo.Core.Providers
     {
         WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType);
 
-        IEnumerable<Week> GetAvailableWeeks();
+        [CacheKey(true,"lastWeekNo")]
+        IEnumerable<Week> GetAvailableWeeks(int lastWeekNo);
     }
 }

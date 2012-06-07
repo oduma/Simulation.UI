@@ -13,13 +13,21 @@ namespace Sciendo.Core
         {
             string response = string.Empty;
             WebRequest webRequest = WebRequest.Create(url);
-            using (StreamReader streamObj = new StreamReader(webRequest.GetResponse().GetResponseStream()))
+            try
             {
-                
-                while (!streamObj.EndOfStream)
+                using (StreamReader streamObj = new StreamReader(webRequest.GetResponse().GetResponseStream()))
                 {
+
+                    while (!streamObj.EndOfStream)
+                    {
                         response = string.Format("{0}{1}", response, streamObj.ReadLine());
+                    }
                 }
+
+            }
+            catch (WebException wex)
+            {
+                //log it here
             }
             return response;
         }

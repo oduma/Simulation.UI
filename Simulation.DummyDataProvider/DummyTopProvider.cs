@@ -31,7 +31,7 @@ namespace Simulation.DummyDataProvider
         }
 
 
-        public IEnumerable<Week> GetAvailableWeeks()
+        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
         {
             DateTime tillNow = DateTime.Now;
 
