@@ -9,14 +9,9 @@ namespace Simulation.DummyDataProvider
 {
     public class DummyTopProvider:DummyTopRecordProvider,ITopProvider
     {
-        public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
+        public WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType)
         {
-            WeeklyTop weeklyTop = new WeeklyTop();
-            weeklyTop.WeekNo = weekNo;
-            weeklyTop.TopItems = GetTopItems(topLength, itemType);
-            weeklyTop.TopProcessed = IsWeekProcessed(GetTopProcessed(), weekNo, itemType);
-            weeklyTop.ItemType = itemType;
-            return weeklyTop;
+            throw new NotImplementedException();
         }
 
         private bool IsWeekProcessed(IEnumerable<WeekSummary> topRecordedItems, int weekNo, ItemType itemType)
@@ -31,28 +26,9 @@ namespace Simulation.DummyDataProvider
         }
 
 
-        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
+        public List<Week> GetAvailableWeeks(int lastWeekNo)
         {
-            DateTime tillNow = DateTime.Now;
-
-            DateTime firstSundayOfTheYear = new DateTime(tillNow.Year, 1, 1);
-            for (int i = 0; i < 7; i++)
-            {
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(i);
-                if (firstSundayOfTheYear.DayOfWeek == DayOfWeek.Sunday)
-                {
-                    break;
-                }
-            }
-
-            DateTime endOfWeek = firstSundayOfTheYear.AddDays(6);
-            int weekNo = 1;
-            while (endOfWeek < tillNow)
-            {
-                yield return new Week { WeekNo = weekNo++, StartingFrom = firstSundayOfTheYear, EndingIn = endOfWeek };
-                firstSundayOfTheYear = firstSundayOfTheYear.AddDays(7);
-                endOfWeek = firstSundayOfTheYear.AddDays(6);
-            }
+            throw new NotImplementedException();
         }
 
     }

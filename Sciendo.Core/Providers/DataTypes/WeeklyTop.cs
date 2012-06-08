@@ -7,6 +7,6 @@ namespace Sciendo.Core.Providers.DataTypes
 {
     public class WeeklyTop:WeekSummary
     {
-        public IEnumerable<TopItem> TopItems { get; set; }
+        public List<TopItem> TopItems { get; set; }
     }
 }

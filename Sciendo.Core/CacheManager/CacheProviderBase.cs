@@ -32,15 +32,15 @@ namespace Sciendo.Core.CacheManager
             {
                 CompositeKey key =  CalculateKey(invocation, (ck != null && ck.KeyAttributes != null && ck.KeyAttributes.Length > 0)?ck.KeyAttributes:null);
                 
-                if (Cache.TryGet(key.FullKey, out result))
+                if (Cache.TryGet(key.FullKey, out result,invocation.Method.ReturnType))
                     invocation.ReturnValue = result;
                 else
                 {
                     base.PerformProceed(invocation);
                     if (invocation.ReturnValue != null)
-                        Cache.Add(key.FullKey, invocation.ReturnValue);
+                        Cache.Add(key.FullKey, invocation.ReturnValue, invocation.Method.ReturnType);
                     else
-                        if (Cache.TryGet(key.MinimalKey, out result))
+                        if (Cache.TryGet(key.MinimalKey, out result, invocation.Method.ReturnType))
                             invocation.ReturnValue = result;
                 }
             }

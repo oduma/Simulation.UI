@@ -21,8 +21,9 @@ namespace Sciendo.Core.CacheManager
                 if (keyAttributes != null && keyAttributes.Length > 0)
                 {
                     // note: not expanding parameters of type list/array - the key may be longer than the actual data
-                    argumentsForKey.AddRange(invocation.Method.GetParameters().Where(p => keyAttributes.Contains(p.Name)).Select(
-                        p => invocation.GetArgumentValue(p.Position)));
+                    var values = invocation.Method.GetParameters().Where(p => keyAttributes.Contains(p.Name)).Select(
+                        p => invocation.GetArgumentValue(p.Position).ToString());
+                    argumentsForKey.AddRange(values);
                 }
 
                 result.FullKey = string.Join("-", argumentsForKey);

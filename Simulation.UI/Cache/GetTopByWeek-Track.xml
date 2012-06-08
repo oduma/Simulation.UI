@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>2</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Anita Lane - The World's a Girl</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>PJ Harvey - Written on the Forehead</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Butthole Surfers - TV Star</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>The Only Ones - Another Girl, Another Planet</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Belle And Sebastian - I Didn't See It Coming</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Anita Lane - Lost In Music</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>The Lazy Boys - Broken Heart</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>John Cooper-Clarke - Reader's Wives</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>XTC - Making Plans For Nigel</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <Position>0</Position>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>PJ Harvey - Hanging in the Wire</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

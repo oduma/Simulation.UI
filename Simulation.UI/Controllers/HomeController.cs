@@ -112,7 +112,11 @@ namespace Simulation.UI.Controllers
                 weekSelectionModel.NextWeekToProcess = topProcessed.Where(t => t.ItemType == weekSelectionModel.ItemType).Max(t => t.WeekNo) + 1;
             else
                 weekSelectionModel.NextWeekToProcess = 1;
-            weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(weekSelectionModel.NextWeekToProcess, 10, weekSelectionModel.ItemType);
+            if (availableWeeks != null)
+            {
+                var requestedWeek = availableWeeks.FirstOrDefault(a => a.WeekNo == weekSelectionModel.NextWeekToProcess);
+                weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(requestedWeek, 10, weekSelectionModel.ItemType);
+            }
             IAlgorythmPoolProvider algoryhtmProvider=ClientFactory.GetClient<IAlgorythmPoolProvider>();
             weekSelectionModel.Settings = new SettingsModel();
             weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
@@ -124,7 +128,11 @@ namespace Simulation.UI.Controllers
         public ActionResult Top(WeekSummary topWeekRequest)
         {
             ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
-            WeeklyTop weeklyTopModel = topProvider.GetTopByWeek(topWeekRequest.WeekNo,10,topWeekRequest.ItemType);
+            var availableWeeks = topProvider.GetAvailableWeeks(Utility.LastWeekNo(DateTime.Now));
+            if (availableWeeks == null)
+                return null;
+            WeeklyTop weeklyTopModel = topProvider.GetTopByWeek(availableWeeks.FirstOrDefault(a=>a.WeekNo==topWeekRequest.WeekNo),
+                10,topWeekRequest.ItemType);
             return Json(weeklyTopModel, JsonRequestBehavior.AllowGet);
         }
         

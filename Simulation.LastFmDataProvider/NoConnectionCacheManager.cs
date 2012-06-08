@@ -19,18 +19,18 @@ namespace Simulation.LastFmDataProvider
             _cachedXmlFolder = ConfigurationManager.AppSettings["CachedXmlFolder"];
         }
 
-        public void Add<T>(string key, T cacheItem) where T: class 
+        public void Add<T>(string key, T cacheItem, Type realType) where T: class 
         {
             string fileFullPath = _cachedXmlFolder + @"\" + key + ".xml"; 
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Create))
             {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+                XmlSerializer xmlSerializer = new XmlSerializer(realType);
                 xmlSerializer.Serialize(fs, cacheItem);
             }
             
         }
 
-        public bool TryGet<T>(string cacheItemKey, out T cacheItem) where T: class
+        public bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType) where T: class
         {
             cacheItem= null;
             string fileFullPath = _cachedXmlFolder + @"\" + cacheItemKey + ".xml"; 
@@ -39,7 +39,7 @@ namespace Simulation.LastFmDataProvider
                 return false;
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
             {
-                XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+                XmlSerializer xmlSerializer = new XmlSerializer(knownType);
                 cacheItem = xmlSerializer.Deserialize(fs) as T;
             }
 

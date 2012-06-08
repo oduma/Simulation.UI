@@ -14,13 +14,13 @@ namespace Simulation.LastFmDataProvider
 {
     public class DummyLfmTopProvider : DummyTopRecordProvider,ITopProvider
     {
-        public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
+        public WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType)
         {
 
             if (itemType == ItemType.Artist)
-                return GetTopByWeekForArtists(weekNo, topLength,IsWeekProcessed(GetTopProcessed(), weekNo, itemType));
+                return GetTopByWeekForArtists(requestedWeek.WeekNo, topLength,IsWeekProcessed(GetTopProcessed(), requestedWeek.WeekNo, itemType));
             else
-                return GetTopbyWeekForTracks(weekNo, topLength,IsWeekProcessed(GetTopProcessed(), weekNo, itemType));
+                return GetTopbyWeekForTracks(requestedWeek.WeekNo, topLength,IsWeekProcessed(GetTopProcessed(), requestedWeek.WeekNo, itemType));
         }
 
         private WeeklyTop GetTopbyWeekForTracks(int weekNo, int topLength, bool isWeekProcessed)
@@ -63,7 +63,7 @@ namespace Simulation.LastFmDataProvider
 
 
 
-        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
+        public List<Week> GetAvailableWeeks(int lastWeekNo)
         {
             
             var fileFullPath = ConfigurationManager.AppSettings["WeeksDummyFile"];

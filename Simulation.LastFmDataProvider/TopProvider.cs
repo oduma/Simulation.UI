@@ -13,14 +13,9 @@ namespace Simulation.LastFmDataProvider
 {
     public class TopProvider:DummyTopRecordProvider, ITopProvider
     {
-        [CacheKey(false, "weekNo","itemType")]
-        public WeeklyTop GetTopByWeek(int weekNo, int topLength, ItemType itemType)
+        public WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType)
         {
-            var availableWeeks = GetAvailableWeeks(Utility.LastWeekNo(DateTime.Now));
-            if (availableWeeks == null)
-                return null;
-            var requestedWeek = availableWeeks.First(w => w.WeekNo == weekNo);
-            requestedWeek.TopProcessed=IsWeekProcessed(GetTopProcessed(), weekNo, itemType);
+            requestedWeek.TopProcessed=IsWeekProcessed(GetTopProcessed(),requestedWeek.WeekNo, itemType);
             if (itemType == ItemType.Artist)
                 return GetTopByWeekForArtists(requestedWeek, topLength);
             else
@@ -68,7 +63,7 @@ namespace Simulation.LastFmDataProvider
 
         public static string ApiKey { get { return "5e625305596ba928b8d8664bd2a95b08"; } }
 
-        public IEnumerable<Week> GetAvailableWeeks(int lastWeekNo)
+        public List<Week> GetAvailableWeeks(int lastWeekNo)
         {
             var url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklychartlist&user=scentmaster&api_key=" + ApiKey;
             var lfmString = HttpHelper.Get(url);

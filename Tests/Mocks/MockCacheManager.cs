@@ -15,12 +15,12 @@ namespace Tests.Mocks
 
         internal Dictionary<string, object> MyOwnFakeCache;
 
-        public void Add<T>(string key, T cacheItem) where T : class
+        public void Add<T>(string key, T cacheItem, Type KnownType) where T : class
         {
             MyOwnFakeCache.Add(key, cacheItem);
         }
 
-        public bool TryGet<T>(string cacheItemKey, out T cacheItem) where T : class
+        public bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType) where T : class
         {
             if (MyOwnFakeCache.ContainsKey(cacheItemKey))
             {

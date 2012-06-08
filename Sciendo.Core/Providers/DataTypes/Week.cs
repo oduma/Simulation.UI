@@ -11,5 +11,10 @@ namespace Sciendo.Core.Providers.DataTypes
         public DateTime StartingFrom { get; set; }
 
         public DateTime EndingIn { get; set; }
+
+        public override string ToString()
+        {
+            return WeekNo.ToString();
+        }
     }
 }

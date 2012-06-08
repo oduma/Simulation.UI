@@ -50,6 +50,7 @@
     <Compile Include="DummyLfmTopProvider.cs" />
     <Compile Include="LfmResponseExtensions.cs" />
     <Compile Include="NoConnectionCacheManager.cs" />
+    <Compile Include="OtherExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TopProvider.cs" />
   </ItemGroup>
