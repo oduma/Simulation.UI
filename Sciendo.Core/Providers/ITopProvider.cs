@@ -9,10 +9,10 @@ namespace Sciendo.Core.Providers
 {
     public interface ITopProvider
     {
-        [CacheKey(false,"itemType","requestedWeek")]
+        [CacheKey(true,"itemType","requestedWeek")]
         WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType);
 
-        [CacheKey(true,"lastWeekNo")]
+        [CacheKey(false,"lastWeekNo")]
         List<Week> GetAvailableWeeks(int lastWeekNo);
     }
 }

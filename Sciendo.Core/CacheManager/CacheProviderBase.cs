@@ -40,8 +40,11 @@ namespace Sciendo.Core.CacheManager
                     if (invocation.ReturnValue != null)
                         Cache.Add(key.FullKey, invocation.ReturnValue, invocation.Method.ReturnType);
                     else
-                        if (Cache.TryGet(key.MinimalKey, out result, invocation.Method.ReturnType))
-                            invocation.ReturnValue = result;
+                    {
+                        if (!ck.UseExactMatch)
+                            if (Cache.TryGet(key.MinimalKey, out result, invocation.Method.ReturnType, ck.UseExactMatch))
+                                invocation.ReturnValue = result;
+                    }
                 }
             }
         }

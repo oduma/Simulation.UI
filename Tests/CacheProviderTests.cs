@@ -12,12 +12,19 @@ namespace Tests
     [TestFixture]
     public class CacheProviderTests
     {
+        MockCacheManager cm;
+
+        [SetUp]
+        public void SetUp()
+        {
+            cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
+            cm.MyOwnFakeCache = new SortedList<string, object>();
+        }
+
         [Test]
         public void WithFullKeyOnly_CachePresent()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager) ClientFactory.GetClient<ICacheManager>();
 
             cm.MyOwnFakeCache.Add("CachedMethodForFullKeyOnlyCachePresent-abc", "abc - Processed!!!");
             var result = mc.CachedMethodForFullKeyOnlyCachePresent("abc");
@@ -31,8 +38,6 @@ namespace Tests
         public void WithFullKeyOnly_CacheNotPresent()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
 
             var result = mc.CachedMethodForFullKeyOnly("abc");
 
@@ -49,9 +54,6 @@ namespace Tests
         public void FullAndMinimalKey_FullKeyCachePresent()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
-
             cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyCachePresent-abc-def", "abcdef - Processed!!!");
             var result = mc.CacheMethodForFullAndMinimalKeyCachePresent("abc", "def");
 
@@ -64,25 +66,20 @@ namespace Tests
         public void FullAndMinimalKey_MinimalKeyCachePresentOnly()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
-
-            cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyMinimalCachePresent", "some other old string - Processed!!!");
+            if (!cm.MyOwnFakeCache.ContainsKey("CacheMethodForFullAndMinimalKeyMinimalCachePresent-feg-ghi"))
+                cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyMinimalCachePresent-feg-ghi", "some other old string - Processed!!!");
             var result = mc.CacheMethodForFullAndMinimalKeyMinimalCachePresent("abc", "def");
 
             Assert.IsNotNull(result);
 
-            Assert.AreEqual(cm.MyOwnFakeCache["CacheMethodForFullAndMinimalKeyMinimalCachePresent"].ToString(), result);
+            Assert.AreEqual(cm.MyOwnFakeCache["CacheMethodForFullAndMinimalKeyMinimalCachePresent-feg-ghi"].ToString(), result);
         }
 
         [Test]
         public void FullAndMinimalKey_FullAndMinimalKeyPresent()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
-
-            cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyMinimalCachePresent", "some other old string - Processed!!!");
+            cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyMinimalCachePresent-feg-ghi", "some other old string - Processed!!!");
             cm.MyOwnFakeCache.Add("CacheMethodForFullAndMinimalKeyMinimalCachePresent-abc-def", "some new string here - processed!!!");
             var result = mc.CacheMethodForFullAndMinimalKeyMinimalCachePresent("abc", "def");
 
@@ -95,9 +92,6 @@ namespace Tests
         public void FullAndMinimalKey_NoKeyPresent()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
-
             var result = mc.CacheMethodForFullAndMinimalKey("abc", "def");
 
             Assert.IsNotNull(result);
@@ -113,9 +107,6 @@ namespace Tests
         public void FullAndMinimalKey_NoKeyPresent_NullReturn()
         {
             IMockClassUsingCache mc = ClientFactory.GetClient<IMockClassUsingCache>();
-
-            MockCacheManager cm = (MockCacheManager)ClientFactory.GetClient<ICacheManager>();
-
             var result = mc.CacheMethodForFullAndMinimalKeyMinimalCachePresent("abc", "def");
 
             Assert.IsNull(result);

@@ -10,14 +10,14 @@ namespace Sciendo.Core.CacheManager
     {
         public string[] KeyAttributes { get; private set; }
 
-        public CacheKey(bool fallOnMinimalKey, params string[] keyAttributes)
+        public CacheKey(bool useExactMatch, params string[] keyAttributes)
         {
-            FallOnMinimalKey = fallOnMinimalKey;
+            UseExactMatch = useExactMatch;
             KeyAttributes = keyAttributes;
         }
 
 
-        public bool FallOnMinimalKey
+        public bool UseExactMatch
         {
             get;
             private set;

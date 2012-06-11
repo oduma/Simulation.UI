@@ -30,19 +30,26 @@ namespace Simulation.LastFmDataProvider
             
         }
 
-        public bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType) where T: class
+        public bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType, bool exactKeyMatch=true) where T: class
         {
             cacheItem= null;
-            string fileFullPath = _cachedXmlFolder + @"\" + cacheItemKey + ".xml"; 
+            string fileFullPath = _cachedXmlFolder + @"\" + cacheItemKey + ".xml";
 
             if (!File.Exists(fileFullPath))
-                return false;
+            {
+                if(exactKeyMatch)
+                    return false;
+                DirectoryInfo dirInfo = new DirectoryInfo(_cachedXmlFolder);
+                var file = dirInfo.EnumerateFiles(cacheItemKey + "*.xml").OrderBy(f => f.CreationTime).LastOrDefault();
+                if (file == null)
+                    return false;
+                fileFullPath = file.FullName;
+            }
             using (FileStream fs = new FileStream(fileFullPath, FileMode.Open))
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(knownType);
                 cacheItem = xmlSerializer.Deserialize(fs) as T;
             }
-
             return true;
         }
 

@@ -9,6 +9,6 @@ namespace Sciendo.Core.CacheManager
     {
         string[] KeyAttributes { get; }
 
-        bool FallOnMinimalKey { get; }
+        bool UseExactMatch { get; }
     }
 }

@@ -9,7 +9,7 @@ namespace Sciendo.Core.CacheManager
     {
         void Add<T>(string key, T cacheItem, Type knownType) where T: class;
 
-        bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType) where T: class;
+        bool TryGet<T>(string cacheItemKey, out T cacheItem, Type knownType, bool exactKeyMatch=true) where T: class;
 
         void Set<T>(string key, T cacheItem) where T: class;
 
