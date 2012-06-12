@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CDF1554E-05DE-4046-83E6-F25FF3698E19}</ProjectGuid>
+    <ProjectGuid>{360F680B-862C-4F24-B875-F2607EF3A921}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Simulation.DummyDataProvider</RootNamespace>
-    <AssemblyName>Simulation.DummyDataProvider</AssemblyName>
+    <RootNamespace>Simulation.DataProviders</RootNamespace>
+    <AssemblyName>Simulation.DataProviders</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\Sciendo.Core\bin\Debug\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,14 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DummyTopRecordProvider.cs" />
-    <Compile Include="DummyTopTotalsProvider.cs" />
+    <Compile Include="AlgorythmPoolProvider.cs" />
+    <Compile Include="BuiltIn\DefaultScoreAlgorythm123.cs" />
+    <Compile Include="BuiltIn\DefaultScoreAlgorythmF1.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sciendo.Core\Sciendo.Core.csproj">
       <Project>{DA778FF7-2370-4F23-9691-CD6ABDC73A9B}</Project>
       <Name>Sciendo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.DataAccess\Simulation.DataAccess.csproj">
+      <Project>{0DD242BA-D9BF-45A2-BC27-9C70FF0E7432}</Project>
+      <Name>Simulation.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

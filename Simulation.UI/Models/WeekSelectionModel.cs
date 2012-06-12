@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Sciendo.Core.Providers.DataTypes;
+using Sciendo.Core.Providers;
 
 namespace Simulation.UI.Models
 {
@@ -22,7 +23,7 @@ namespace Simulation.UI.Models
 
         public int NextWeekToProcess { get; set; }
 
-        public ScoreAlgorythm CurrentAlgorythm { get; set; }
+        public IScoreAlgorythm CurrentAlgorythm { get; set; }
 
         public SettingsModel Settings { get; set; }
 

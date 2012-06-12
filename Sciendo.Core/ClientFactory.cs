@@ -22,5 +22,17 @@ namespace Sciendo.Core
                 throw new NotImplementedException();
             }
         }
+
+        public static IEnumerable<T> GetClients<T>()
+        {
+            try
+            {
+                return _container.ResolveAll<T>();
+            }
+            catch
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

@@ -8,10 +8,10 @@ namespace Sciendo.Core.Providers
 {
     public interface IAlgorythmPoolProvider
     {
-        IEnumerable<ScoreAlgorythm> GetAvailableScoreAlgorythms(ItemType itemType);
+        IEnumerable<IScoreAlgorythm> GetAvailableScoreAlgorythms(ItemType itemType);
 
-        bool SetRule(NewRule rule);
+        void SetRule(CurrentScoreAlgorythm rule);
 
-        ScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType);
+        IScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType);
     }
 }

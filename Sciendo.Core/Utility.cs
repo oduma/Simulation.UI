@@ -26,6 +26,26 @@ namespace Sciendo.Core
             return new UTF8Encoding().GetString(ms.GetBuffer());
         }
 
+        public static List<T> DeserializeFromFile<T>(string fileName) where T: class
+        {
+            if (!File.Exists(fileName))
+                return new List<T>();
+            using (FileStream fs = new FileStream(fileName, FileMode.Open))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
+                return (xmlSerializer.Deserialize(fs) as List<T>);
+            }
+        }
+
+        public static void SerializeToFile<T>(List<T> data, string fileName) where T: class
+        {
+            using (FileStream fs = new FileStream(fileName, FileMode.Create))
+            {
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<T>));
+                xmlSerializer.Serialize(fs, data);
+            }
+
+        }
         public static int LastWeekNo(DateTime today)
         {
             DateTime firstSundayOfTheYear = new DateTime(today.Year, 1, 1);

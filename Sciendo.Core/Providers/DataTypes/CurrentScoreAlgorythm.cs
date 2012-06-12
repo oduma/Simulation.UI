@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Sciendo.Core.Providers.DataTypes
 {
-    public class NewRule
+    public class CurrentScoreAlgorythm
     {
         public ItemType ItemType { get; set; }
 
-        public string RuleName { get; set; }
+        public string Name { get; set; }
     }
 }

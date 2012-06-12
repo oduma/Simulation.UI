@@ -43,12 +43,12 @@ namespace Simulation.UI.Controllers
             ItemType currentItemType;
             if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
                 throw new ArgumentException("argument id is not an ItemType");
-            NewRule rule = new NewRule { ItemType = currentItemType, RuleName = ruleName };
+            CurrentScoreAlgorythm rule = new CurrentScoreAlgorythm { ItemType = currentItemType, Name = ruleName };
             IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            var result = alg.SetRule(rule);
+            alg.SetRule(rule);
             ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
             topTotalsProvider.ClearAll(currentItemType);
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return Json(null, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult AddToTotals(string id)

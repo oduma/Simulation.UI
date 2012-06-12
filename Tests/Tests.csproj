@@ -48,7 +48,9 @@
     <Compile Include="Mocks\IMockClassUsingCache.cs" />
     <Compile Include="Mocks\MockCacheManager.cs" />
     <Compile Include="Mocks\MockClassUsingCache.cs" />
+    <Compile Include="Mocks\MockSimulationCRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoringTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -58,6 +60,18 @@
     <ProjectReference Include="..\Sciendo.Core\Sciendo.Core.csproj">
       <Project>{DA778FF7-2370-4F23-9691-CD6ABDC73A9B}</Project>
       <Name>Sciendo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.DataAccess\Simulation.DataAccess.csproj">
+      <Project>{0DD242BA-D9BF-45A2-BC27-9C70FF0E7432}</Project>
+      <Name>Simulation.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.DataProviders\Simulation.DataProviders.csproj">
+      <Project>{360F680B-862C-4F24-B875-F2607EF3A921}</Project>
+      <Name>Simulation.DataProviders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.DummyDataProvider\Simulation.DummyDataProvider.csproj">
+      <Project>{CDF1554E-05DE-4046-83E6-F25FF3698E19}</Project>
+      <Name>Simulation.DummyDataProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Simulation.LastFmDataProvider\Simulation.LastFmDataProvider.csproj">
       <Project>{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}</Project>
