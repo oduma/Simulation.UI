@@ -10,8 +10,11 @@ namespace Sciendo.Core.Providers
     {
         IEnumerable<WeekSummary> GetTopProcessed();
 
-        void ClearRecords(ItemType itemType);
+        void SaveTotalForItems(WeeklyTop topTotalForModel, Func<int, int> ScoreRule);
 
-        void RecordSavedWeeks(List<WeekSummary> weekSummaries);
+        List<TopItem> GetTotalItems(ItemType itemType);
+
+        void ClearAll(ItemType itemType);
+
     }
 }

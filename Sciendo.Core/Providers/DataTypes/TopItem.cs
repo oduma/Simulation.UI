@@ -9,8 +9,6 @@ namespace Sciendo.Core.Providers.DataTypes
     {
         public int Rank { get; set; }
 
-        public int Position { get; set; }
-
         public int NumberOfPlays { get; set; }
 
         public string ItemName { get; set; }

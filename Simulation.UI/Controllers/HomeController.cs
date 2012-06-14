@@ -46,7 +46,7 @@ namespace Simulation.UI.Controllers
             CurrentScoreAlgorythm rule = new CurrentScoreAlgorythm { ItemType = currentItemType, Name = ruleName };
             IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
             alg.SetRule(rule);
-            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            ITopRecordProvider topTotalsProvider = ClientFactory.GetClient<ITopRecordProvider>();
             topTotalsProvider.ClearAll(currentItemType);
             return Json(null, JsonRequestBehavior.AllowGet);
         }
@@ -73,7 +73,7 @@ namespace Simulation.UI.Controllers
             topForTotalModel.ItemType = currentItemType;
 
             TotalsAfterWeek totalsAfterWeek = new TotalsAfterWeek();
-            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            ITopRecordProvider topTotalsProvider = ClientFactory.GetClient<ITopRecordProvider>();
             IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
 
             topTotalsProvider.SaveTotalForItems(topForTotalModel,algorythmPoolProvider.GetCurrentAlgorythm(currentItemType).ScoreRule);
@@ -89,7 +89,7 @@ namespace Simulation.UI.Controllers
             if (!Enum.TryParse<ItemType>(id, true, out currentItemType))
                 throw new ArgumentException("argument id is not an ItemType");
 
-            ITopTotalsProvider topTotalsProvider = ClientFactory.GetClient<ITopTotalsProvider>();
+            ITopRecordProvider topTotalsProvider = ClientFactory.GetClient<ITopRecordProvider>();
             return Json(topTotalsProvider.GetTotalItems(currentItemType), JsonRequestBehavior.AllowGet);
 
         }

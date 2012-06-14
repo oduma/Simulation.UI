@@ -9,7 +9,18 @@ namespace Tests.Mocks
 {
     public class MockSimulationCRUD:ISimulationCRUD
     {
+        public MockSimulationCRUD()
+        {
+            Repository.Clear();
+            RecordRepository.Clear();
+            TotalRepository.Clear();
+        }
+
         public List<CurrentScoreAlgorythm> Repository = new List<CurrentScoreAlgorythm>();
+
+        public List<WeekSummary> RecordRepository = new List<WeekSummary>();
+
+        public List<TopItem> TotalRepository = new List<TopItem>();
 
         public List<CurrentScoreAlgorythm> ListCurrentScoreAlgorythms()
         {
@@ -22,6 +33,28 @@ namespace Tests.Mocks
                 Repository.First(r => r.ItemType == currentScoreAlgorythm.ItemType).Name = currentScoreAlgorythm.Name;
             else
                 Repository.Add(currentScoreAlgorythm);
+        }
+
+
+        public List<WeekSummary> GetTopProcessed()
+        {
+            return RecordRepository;
+        }
+
+        public void SaveRecordedWeeks(List<WeekSummary> weekSummaries)
+        {
+            RecordRepository = weekSummaries;
+        }
+
+
+        public List<TopItem> ListTotalItems(ItemType itemType)
+        {
+            return TotalRepository.Where(t => t.ItemType == itemType).ToList();
+        }
+
+        public void SaveTotalItems(ItemType itemType, List<TopItem> topItems)
+        {
+            TotalRepository = topItems;
         }
     }
 }

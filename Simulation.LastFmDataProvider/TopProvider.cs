@@ -6,20 +6,31 @@ using Sciendo.Core.Providers;
 using Sciendo.Core.Providers.DataTypes;
 using Sciendo.Core;
 using Simulation.LastFmDataProvider.DataTypes;
-using Simulation.DummyDataProvider;
 using Sciendo.Core.CacheManager;
 
 namespace Simulation.LastFmDataProvider
 {
-    public class TopProvider:DummyTopRecordProvider, ITopProvider
+    public class TopProvider: ITopProvider
     {
+        ITopRecordProvider _topRecordProvider;
+
+        public TopProvider()
+        {
+            _topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
+        }
+
         public WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType)
         {
-            requestedWeek.TopProcessed=IsWeekProcessed(GetTopProcessed(),requestedWeek.WeekNo, itemType);
+            requestedWeek.TopProcessed = IsWeekProcessed(_topRecordProvider.GetTopProcessed(), requestedWeek.WeekNo, itemType);
             if (itemType == ItemType.Artist)
                 return GetTopByWeekForArtists(requestedWeek, topLength);
             else
                 return GetTopbyWeekForTracks(requestedWeek, topLength);
+        }
+
+        private bool IsWeekProcessed(IEnumerable<WeekSummary> topRecordedItems, int weekNo, ItemType itemType)
+        {
+            return topRecordedItems.FirstOrDefault(r => r.WeekNo == weekNo && r.ItemType.ToString().ToLower() == itemType.ToString().ToLower()) != null;
         }
 
         private WeeklyTop GetTopbyWeekForTracks(Week week, int topLength)

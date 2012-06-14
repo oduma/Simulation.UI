@@ -68,7 +68,6 @@
     <Compile Include="Providers\IScoreAlgorythm.cs" />
     <Compile Include="Providers\ITopProvider.cs" />
     <Compile Include="Providers\ITopRecordProvider.cs" />
-    <Compile Include="Providers\ITopTotalsProvider.cs" />
     <Compile Include="TopItemComparer.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>

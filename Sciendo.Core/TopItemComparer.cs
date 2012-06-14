@@ -23,7 +23,12 @@ namespace Sciendo.Core
             {
                 if (x == null)
                     return 1;
-                return y.Score.CompareTo(x.Score);
+                else
+                {
+                    if (y.Score == x.Score)
+                        return y.NumberOfPlays.CompareTo(x.NumberOfPlays);
+                    return y.Score.CompareTo(x.Score);
+                }
             }
         }
     }

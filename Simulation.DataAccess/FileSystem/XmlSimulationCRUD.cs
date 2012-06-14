@@ -30,5 +30,36 @@ namespace Simulation.DataAccess.FileSystem
 
             Utility.SerializeToFile(existingSettings, fileFullPath);
         }
+
+
+        public List<WeekSummary> GetTopProcessed()
+        {
+
+            var fileFullPath = ConfigurationManager.AppSettings["TopRecordFile"];
+            return Utility.DeserializeFromFile<WeekSummary>(fileFullPath);
+        }
+
+
+        public void SaveRecordedWeeks(List<WeekSummary> weekSummaries)
+        {
+            var fileFullPath = ConfigurationManager.AppSettings["TopRecordFile"];
+            Utility.SerializeToFile(weekSummaries, fileFullPath);
+        }
+
+
+        public List<TopItem> ListTotalItems(ItemType itemType)
+        {
+            var fileFullPath = ConfigurationManager.AppSettings["TotalsLocation"] + @"\" + itemType.ToString() + ".xml";
+            return Utility.DeserializeFromFile<TopItem>(fileFullPath);
+        }
+
+
+
+
+        public void SaveTotalItems(ItemType itemType, List<TopItem> topItems)
+        {
+            var fileFullPath = ConfigurationManager.AppSettings["TotalsLocation"] + @"\" + itemType.ToString() + ".xml";
+            Utility.SerializeToFile(topItems, fileFullPath);
+        }
     }
 }

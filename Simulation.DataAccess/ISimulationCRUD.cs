@@ -11,5 +11,13 @@ namespace Simulation.DataAccess
         List<CurrentScoreAlgorythm> ListCurrentScoreAlgorythms();
 
         void SaveCurrentScoreAlgorythm(CurrentScoreAlgorythm currentScoreAlgorythm);
+
+        List<WeekSummary> GetTopProcessed();
+
+        void SaveRecordedWeeks(List<WeekSummary> weekSummaries);
+
+        List<TopItem> ListTotalItems(ItemType itemType);
+
+        void SaveTotalItems(ItemType itemType, List<TopItem> topItems);
     }
 }

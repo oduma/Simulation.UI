@@ -58,10 +58,6 @@
       <Project>{DA778FF7-2370-4F23-9691-CD6ABDC73A9B}</Project>
       <Name>Sciendo.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Simulation.DummyDataProvider\Simulation.DummyDataProvider.csproj">
-      <Project>{CDF1554E-05DE-4046-83E6-F25FF3698E19}</Project>
-      <Name>Simulation.DummyDataProvider</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

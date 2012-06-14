@@ -51,6 +51,7 @@
     <Compile Include="Mocks\MockSimulationCRUD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScoringTests.cs" />
+    <Compile Include="TopBuildingTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,10 +69,6 @@
     <ProjectReference Include="..\Simulation.DataProviders\Simulation.DataProviders.csproj">
       <Project>{360F680B-862C-4F24-B875-F2607EF3A921}</Project>
       <Name>Simulation.DataProviders</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Simulation.DummyDataProvider\Simulation.DummyDataProvider.csproj">
-      <Project>{CDF1554E-05DE-4046-83E6-F25FF3698E19}</Project>
-      <Name>Simulation.DummyDataProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Simulation.LastFmDataProvider\Simulation.LastFmDataProvider.csproj">
       <Project>{622E7D48-E987-4C9C-99CE-DE46C90B0CD4}</Project>
