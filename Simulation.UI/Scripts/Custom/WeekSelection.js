@@ -78,7 +78,7 @@ $(function () {
         colNames: [$("#typeOfSelection").val(), "Position", "Score", "Entry Week"],
         colModel: [
             { name: 'ItemName', index: 'ItemName', width: 355 },
-            { name: 'Position', index: 'Position', width: 90 },
+            { name: 'Rank', index: 'Rank', width: 90 },
             { name: 'Score', index: 'Score', width: 100 },
             { name: 'EntryWeek', index: 'EntryWeek', width: 180, align: "right"}],
         rowNum: 10,
@@ -93,34 +93,39 @@ $(function () {
 });
 
 function printTop(weeklyTop) {
-    $("#TopWeek" + weeklyTop.WeekNo).text = "";
-    if (weeklyTop.TopProcessed === false) {
-        $("#action" + weeklyTop.WeekNo).append("<input type='button' class='addToTotal' id='addToTotal" + weeklyTop.WeekNo + "' value='Add to Total'/>");
-        $("#addToTotal" + weeklyTop.WeekNo).click(function (event) {
-            var url, data;
-            url = "AddToTotals";
-            data = {
-                "WeekNo": weeklyTop.WeekNo,
-                "TopItems": []
-            };
-            for (var i = 0; i < $("#noOfItems").val(); i++) {
-                data.TopItems.push({ "ItemName": $("#w" + weeklyTop.WeekNo + "i" + (i + 1)).text(),
-                    "Rank": i + 1
-                });
-            }
-            $.post(url, data, addTotalsAgain, "json");
-
-        });
+    if (weeklyTop.TopItems == null) {
+        $("#action" + weeklyTop.WeekNo).append("<p>No Data Retrieved for this week.Check the connection with your top provider.</p>");
     }
     else {
-        $("#action" + weeklyTop.WeekNo).append("<p>Processed</p>");
-    }
-    var topItems = weeklyTop.TopItems;
-    $.each(topItems, function (i) {
-        if ($("#li" + weeklyTop.WeekNo + weeklyTop.TopItems[i].Rank).length <= 0) {
-            $("#TopWeek" + weeklyTop.WeekNo).append("<li class='topItem' id='li" + weeklyTop.WeekNo + topItems[i].Rank + "'><span>" + topItems[i].Rank + "</span><span id='w" +weeklyTop.WeekNo + "i" + topItems[i].Rank + "'>" + topItems[i].ItemName + "</span><span>(" + topItems[i].NumberOfPlays + ")</span></li>");
+        $("#TopWeek" + weeklyTop.WeekNo).text = "";
+        if (weeklyTop.TopProcessed === false) {
+            $("#action" + weeklyTop.WeekNo).append("<input type='button' class='addToTotal' id='addToTotal" + weeklyTop.WeekNo + "' value='Add to Total'/>");
+            $("#addToTotal" + weeklyTop.WeekNo).click(function (event) {
+                var url, data;
+                url = "AddToTotals";
+                data = {
+                    "WeekNo": weeklyTop.WeekNo,
+                    "TopItems": []
+                };
+                for (var i = 0; i < $("#noOfItems").val(); i++) {
+                    data.TopItems.push({ "ItemName": $("#w" + weeklyTop.WeekNo + "i" + (i + 1)).text(),
+                        "Rank": i + 1
+                    });
+                }
+                $.post(url, data, addTotalsAgain, "json");
+
+            });
         }
-    });
+        else {
+            $("#action" + weeklyTop.WeekNo).append("<p>Processed</p>");
+        }
+        var topItems = weeklyTop.TopItems;
+        $.each(topItems, function (i) {
+            if ($("#li" + weeklyTop.WeekNo + weeklyTop.TopItems[i].Rank).length <= 0) {
+                $("#TopWeek" + weeklyTop.WeekNo).append("<li class='topItem' id='li" + weeklyTop.WeekNo + topItems[i].Rank + "'><span>" + topItems[i].Rank + "</span><span id='w" + weeklyTop.WeekNo + "i" + topItems[i].Rank + "'>" + topItems[i].ItemName + "</span><span>(" + topItems[i].NumberOfPlays + ")</span></li>");
+            }
+        });
+    }
 }
 
 $(function () {

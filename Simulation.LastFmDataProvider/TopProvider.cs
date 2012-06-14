@@ -35,21 +35,29 @@ namespace Simulation.LastFmDataProvider
 
         private WeeklyTop GetTopbyWeekForTracks(Week week, int topLength)
         {
-            return new WeeklyTop
+            try
             {
-                WeekNo = week.WeekNo,
-                TopProcessed = week.TopProcessed,
-                ItemType = ItemType.Track,
-                TopItems = Utility.Deserialize<LfmGetChartTracksResponse>(
-                    HttpHelper.Get(@"http://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart" +
-                        @"&user=scentmaster&from=" +
-                        week.StartingFrom.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
-                        "&to=" +
-                        week.EndingIn.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
-                        "&api_key=" + ApiKey))
-                            .Tracks
-                            .TransformToTopItems(topLength)
-            };
+                return new WeeklyTop
+                {
+                    WeekNo = week.WeekNo,
+                    TopProcessed = week.TopProcessed,
+                    ItemType = ItemType.Track,
+                    TopItems = Utility.Deserialize<LfmGetChartTracksResponse>(
+                        HttpHelper.Get(@"http://ws.audioscrobbler.com/2.0/?method=user.getweeklytrackchart" +
+                            @"&user=scentmaster&from=" +
+                            week.StartingFrom.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
+                            "&to=" +
+                            week.EndingIn.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
+                            "&api_key=" + ApiKey))
+                                .Tracks
+                                .TransformToTopItems(topLength)
+                };
+            }
+            catch (Exception ex)
+            {
+                //should log something in here;
+                return null;
+            }
         }
 
         private WeeklyTop GetTopByWeekForArtists(Week week, int topLength)

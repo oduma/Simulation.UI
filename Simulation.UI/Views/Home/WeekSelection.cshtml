@@ -71,28 +71,38 @@
         <div class="tall">
             <span class="action" id="@string.Concat("action",week.WeekNo)">
             @if (week.WeekNo == Model.NextWeekToProcess)
-            { 
-                if (Model.FirstWeekTop.TopProcessed)
-                { 
-                    <p>Processed</p>
+            {
+                if (Model.FirstWeekTop == null)
+                {
+                    <p>No Data Retrieved for this week.Check the connection with your top provider.</p> 
                 }
                 else
                 {
-                    <input type="button" class="addToTotal" id="@string.Concat("addToTotal",@week.WeekNo)" value="Add to total"/>
+                    if (Model.FirstWeekTop == null || !Model.FirstWeekTop.TopProcessed)
+                    { 
+                    <input type="button" class="addToTotal" id="@string.Concat("addToTotal", @week.WeekNo)" value="Add to total"/>
+                    }
+                    else
+                    {
+                    <p>Processed</p>
+                    }
                 }
             }
             </span>
+            @if(Model.FirstWeekTop!=null)
+            {
             <ul id="@string.Concat("TopWeek", week.WeekNo)" class="topWeek">
             @if (week.WeekNo == Model.NextWeekToProcess)
             {
                 foreach (Sciendo.Core.Providers.DataTypes.TopItem topItem in Model.FirstWeekTop.TopItems)
                 {
                     <li class="topItem" id="@string.Concat("li", week.WeekNo.ToString() + topItem.Rank.ToString())"><span>@topItem.Rank</span>
-                    <span id="@string.Concat("w"+week.WeekNo, "i" + topItem.Rank)">@topItem.ItemName</span>
+                    <span id="@string.Concat("w" + week.WeekNo, "i" + topItem.Rank)">@topItem.ItemName</span>
                     <span>(@topItem.NumberOfPlays)</span></li>     
                 }
             }
             </ul>
+            }
         </div>
         </div> 
     }

@@ -133,6 +133,13 @@ namespace Simulation.UI.Controllers
                 return null;
             WeeklyTop weeklyTopModel = topProvider.GetTopByWeek(availableWeeks.FirstOrDefault(a=>a.WeekNo==topWeekRequest.WeekNo),
                 10,topWeekRequest.ItemType);
+            if (weeklyTopModel == null)
+            {
+                weeklyTopModel = new WeeklyTop();
+                weeklyTopModel.ItemType = topWeekRequest.ItemType;
+                weeklyTopModel.WeekNo = topWeekRequest.WeekNo;
+            }
+            
             return Json(weeklyTopModel, JsonRequestBehavior.AllowGet);
         }
         
