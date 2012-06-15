@@ -36,6 +36,7 @@ function getRulesChanged(response) {
     $("nextWeekToProcess").val("1");
     getTotalsAgain(null);
     $("#accordion").accordion("option", "active", "0");
+    $("#noOfItems").val(response);
 
 }
 
@@ -94,6 +95,7 @@ $(function () {
 
 function printTop(weeklyTop) {
     if (weeklyTop.TopItems == null) {
+        $("#action" + weeklyTop.WeekNo).clear();
         $("#action" + weeklyTop.WeekNo).append("<p>No Data Retrieved for this week.Check the connection with your top provider.</p>");
     }
     else {

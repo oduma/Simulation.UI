@@ -31,10 +31,11 @@ namespace Simulation.DataProviders
             return (existingItem != null) ? existingItem.Name : string.Empty;
         }
 
-        public void SetRule(CurrentScoreAlgorythm rule)
+        public int SetRule(CurrentScoreAlgorythm rule)
         {
             ISimulationCRUD simulationCRUD = ClientFactory.GetClient<ISimulationCRUD>();
             simulationCRUD.SaveCurrentScoreAlgorythm(rule);
+            return GetCurrentAlgorythm(rule.ItemType).NoOfItemsConsidered;
         }
 
         public IScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType)

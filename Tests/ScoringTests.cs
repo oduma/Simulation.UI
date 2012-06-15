@@ -41,13 +41,14 @@ namespace Tests
         {
             ISimulationCRUD sim = ClientFactory.GetClient<ISimulationCRUD>();
             IAlgorythmPoolProvider app = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            app.SetRule(new CurrentScoreAlgorythm { Name = "F1", ItemType = ItemType.Artist });
+            var noOfItems = app.SetRule(new CurrentScoreAlgorythm { Name = "F1", ItemType = ItemType.Artist });
             var allAlgs = app.GetAvailableScoreAlgorythms(ItemType.Artist);
             Assert.IsNotNull(allAlgs);
             Assert.AreEqual(2, allAlgs.Count());
             Assert.AreEqual(1, allAlgs.Count(a => !a.InUse));
             Assert.AreEqual("F1", allAlgs.Where(a => a.InUse).Select(a => a.Name).First());
             Assert.AreEqual(1, sim.ListCurrentScoreAlgorythms().Count);
+            Assert.AreEqual(noOfItems, allAlgs.Where(a => a.InUse).Select(a => a.NoOfItemsConsidered).First());
         }
 
         [Test]
@@ -56,7 +57,7 @@ namespace Tests
             ISimulationCRUD sim = ClientFactory.GetClient<ISimulationCRUD>();
             sim.SaveCurrentScoreAlgorythm(new CurrentScoreAlgorythm { Name = "Top 3", ItemType = ItemType.Artist });
             IAlgorythmPoolProvider app = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            app.SetRule(new CurrentScoreAlgorythm { Name = "F1", ItemType = ItemType.Artist });
+            var noOfItems = app.SetRule(new CurrentScoreAlgorythm { Name = "F1", ItemType = ItemType.Artist });
             var allAlgs = app.GetAvailableScoreAlgorythms(ItemType.Artist);
             Assert.IsNotNull(allAlgs);
             Assert.AreEqual(2, allAlgs.Count());
@@ -64,6 +65,7 @@ namespace Tests
             Assert.AreEqual("F1", allAlgs.Where(a => a.InUse).Select(a => a.Name).First());
             Assert.AreEqual(1, sim.ListCurrentScoreAlgorythms().Count);
             Assert.AreEqual("F1", sim.ListCurrentScoreAlgorythms()[0].Name);
+            Assert.AreEqual(noOfItems, allAlgs.Where(a => a.InUse).Select(a => a.NoOfItemsConsidered).First());
         }
 
         [Test]

@@ -10,7 +10,7 @@ namespace Sciendo.Core.Providers
     {
         IEnumerable<IScoreAlgorythm> GetAvailableScoreAlgorythms(ItemType itemType);
 
-        void SetRule(CurrentScoreAlgorythm rule);
+        int SetRule(CurrentScoreAlgorythm rule);
 
         IScoreAlgorythm GetCurrentAlgorythm(ItemType currentItemType);
     }

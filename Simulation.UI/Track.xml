@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<ArrayOfTopItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TopItem>
+    <Rank>1</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Anita Lane - The World's a Girl</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>10</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>2</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>PJ Harvey - Written on the Forehead</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>8</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>3</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Butthole Surfers - TV Star</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>6</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>4</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>The Only Ones - Another Girl, Another Planet</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>5</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>5</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Belle And Sebastian - I Didn't See It Coming</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>4</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>6</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>Anita Lane - Lost In Music</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>3</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>7</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>The Lazy Boys - Broken Heart</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>2</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+  <TopItem>
+    <Rank>8</Rank>
+    <NumberOfPlays>0</NumberOfPlays>
+    <ItemName>John Cooper-Clarke - Reader's Wives</ItemName>
+    <ItemType>Track</ItemType>
+    <Score>1</Score>
+    <EntryWeek>2</EntryWeek>
+  </TopItem>
+</ArrayOfTopItem>

@@ -89,10 +89,8 @@
                 }
             }
             </span>
-            @if(Model.FirstWeekTop!=null)
-            {
             <ul id="@string.Concat("TopWeek", week.WeekNo)" class="topWeek">
-            @if (week.WeekNo == Model.NextWeekToProcess)
+            @if (Model.FirstWeekTop!=null && week.WeekNo == Model.NextWeekToProcess)
             {
                 foreach (Sciendo.Core.Providers.DataTypes.TopItem topItem in Model.FirstWeekTop.TopItems)
                 {
@@ -102,7 +100,6 @@
                 }
             }
             </ul>
-            }
         </div>
         </div> 
     }

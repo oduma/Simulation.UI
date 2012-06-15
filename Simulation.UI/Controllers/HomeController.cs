@@ -45,10 +45,10 @@ namespace Simulation.UI.Controllers
                 throw new ArgumentException("argument id is not an ItemType");
             CurrentScoreAlgorythm rule = new CurrentScoreAlgorythm { ItemType = currentItemType, Name = ruleName };
             IAlgorythmPoolProvider alg = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            alg.SetRule(rule);
+            var noOfItems  = alg.SetRule(rule);
             ITopRecordProvider topTotalsProvider = ClientFactory.GetClient<ITopRecordProvider>();
             topTotalsProvider.ClearAll(currentItemType);
-            return Json(null, JsonRequestBehavior.AllowGet);
+            return Json(noOfItems, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult AddToTotals(string id)
