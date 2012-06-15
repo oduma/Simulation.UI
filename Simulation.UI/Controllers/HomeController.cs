@@ -106,6 +106,12 @@ namespace Simulation.UI.Controllers
                 weekSelectionModel.AvailableWeeks = availableWeeks.Select(w => new WeekModel { EndingIn = w.EndingIn, ItemType = currentItemType, StartingFrom = w.StartingFrom,  WeekNo = w.WeekNo });
             else
                 weekSelectionModel.AvailableWeeks=new WeekModel[] {};
+
+            IAlgorythmPoolProvider algoryhtmProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
+            weekSelectionModel.Settings = new SettingsModel();
+            weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
+            weekSelectionModel.CurrentAlgorythm = algoryhtmProvider.GetCurrentAlgorythm(currentItemType);
+
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var topProcessed = topRecordProvider.GetTopProcessed();
             if (topProcessed.FirstOrDefault(p => p.ItemType == weekSelectionModel.ItemType) != null)
@@ -115,24 +121,22 @@ namespace Simulation.UI.Controllers
             if (availableWeeks != null)
             {
                 var requestedWeek = availableWeeks.FirstOrDefault(a => a.WeekNo == weekSelectionModel.NextWeekToProcess);
-                weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(requestedWeek, 10, weekSelectionModel.ItemType);
+                weekSelectionModel.FirstWeekTop = topProvider.GetTopByWeek(requestedWeek, weekSelectionModel.CurrentAlgorythm.NoOfItemsConsidered, weekSelectionModel.ItemType);
             }
-            IAlgorythmPoolProvider algoryhtmProvider=ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            weekSelectionModel.Settings = new SettingsModel();
-            weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
-            weekSelectionModel.CurrentAlgorythm = algoryhtmProvider.GetCurrentAlgorythm(currentItemType);
             return View(weekSelectionModel);
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Top(WeekSummary topWeekRequest)
         {
+
+            IAlgorythmPoolProvider algoryhtmProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
             ITopProvider topProvider = ClientFactory.GetClient<ITopProvider>();
             var availableWeeks = topProvider.GetAvailableWeeks(Utility.LastWeekNo(DateTime.Now));
             if (availableWeeks == null)
                 return null;
             WeeklyTop weeklyTopModel = topProvider.GetTopByWeek(availableWeeks.FirstOrDefault(a=>a.WeekNo==topWeekRequest.WeekNo),
-                10,topWeekRequest.ItemType);
+                algoryhtmProvider.GetCurrentAlgorythm(topWeekRequest.ItemType).NoOfItemsConsidered, topWeekRequest.ItemType);
             if (weeklyTopModel == null)
             {
                 weeklyTopModel = new WeeklyTop();

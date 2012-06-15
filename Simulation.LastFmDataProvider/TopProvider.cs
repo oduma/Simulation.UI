@@ -12,6 +12,7 @@ namespace Simulation.LastFmDataProvider
 {
     public class TopProvider: ITopProvider
     {
+        private static readonly int _defaultTopLength = 10;
         ITopRecordProvider _topRecordProvider;
 
         public TopProvider()
@@ -21,6 +22,9 @@ namespace Simulation.LastFmDataProvider
 
         public WeeklyTop GetTopByWeek(Week requestedWeek, int topLength, ItemType itemType)
         {
+            if (topLength < _defaultTopLength)
+                topLength = _defaultTopLength;
+
             requestedWeek.TopProcessed = IsWeekProcessed(_topRecordProvider.GetTopProcessed(), requestedWeek.WeekNo, itemType);
             if (itemType == ItemType.Artist)
                 return GetTopByWeekForArtists(requestedWeek, topLength);

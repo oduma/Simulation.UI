@@ -191,9 +191,6 @@
     <Content Include="Views\Shared\_LayoutPopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Settings.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\DummyTopProviderSettings.cshtml" />
   </ItemGroup>
   <ItemGroup>

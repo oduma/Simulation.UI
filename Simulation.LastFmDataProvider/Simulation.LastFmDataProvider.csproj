@@ -47,7 +47,6 @@
     <Compile Include="DataTypes\LfmGetChartTracksResponse.cs" />
     <Compile Include="DataTypes\LfmGetWeekChartlistResponse.cs" />
     <Compile Include="DataTypes\Track.cs" />
-    <Compile Include="DummyLfmTopProvider.cs" />
     <Compile Include="LfmResponseExtensions.cs" />
     <Compile Include="NoConnectionCacheManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
