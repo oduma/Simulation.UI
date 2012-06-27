@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>9</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Artist</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Led Zeppelin</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Tommy James &amp; The Shondells</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Highwaymen</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Royal Family and the Poor</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Suicide</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

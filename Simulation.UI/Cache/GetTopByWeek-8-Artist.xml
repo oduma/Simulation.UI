@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>8</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Artist</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>12</NumberOfPlays>
+      <ItemName>Elliott Smith</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>11</NumberOfPlays>
+      <ItemName>Jane's Addiction</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>11</NumberOfPlays>
+      <ItemName>Suede</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>11</NumberOfPlays>
+      <ItemName>James Blake</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>10</NumberOfPlays>
+      <ItemName>Emerson, Lake &amp; Palmer</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>9</NumberOfPlays>
+      <ItemName>Jaco Pastorius</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>9</NumberOfPlays>
+      <ItemName>Cocteau Twins</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>6</NumberOfPlays>
+      <ItemName>Belle and Sebastian</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>5</NumberOfPlays>
+      <ItemName>Paloma Faith</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Guðrið Hansdóttir</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

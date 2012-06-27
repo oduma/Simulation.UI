@@ -34,7 +34,7 @@ namespace Simulation.UI.Controllers
             IAlgorythmPoolProvider algorythmPoolProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
             ITopRecordProvider topRecordProvider = ClientFactory.GetClient<ITopRecordProvider>();
             var topProcessed = topRecordProvider.GetTopProcessed();
-            return View("Settings", new SettingsModel());
+            return View("Settings", new Settings());
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
@@ -93,6 +93,7 @@ namespace Simulation.UI.Controllers
             return Json(topTotalsProvider.GetTotalItems(currentItemType), JsonRequestBehavior.AllowGet);
 
         }
+        
         public ActionResult WeekSelection(string id)
         {
             ItemType currentItemType;
@@ -108,7 +109,7 @@ namespace Simulation.UI.Controllers
                 weekSelectionModel.AvailableWeeks=new WeekModel[] {};
 
             IAlgorythmPoolProvider algoryhtmProvider = ClientFactory.GetClient<IAlgorythmPoolProvider>();
-            weekSelectionModel.Settings = new SettingsModel();
+            weekSelectionModel.Settings = new Settings();
             weekSelectionModel.Settings.ScoreAlgorythms = algoryhtmProvider.GetAvailableScoreAlgorythms(currentItemType);
             weekSelectionModel.CurrentAlgorythm = algoryhtmProvider.GetCurrentAlgorythm(currentItemType);
 
@@ -172,5 +173,6 @@ namespace Simulation.UI.Controllers
             optionsModel.Add(newOption);
             return Json(optionsModel);
         }
+
     }
 }

@@ -7,13 +7,11 @@ using Sciendo.Core.Providers;
 
 namespace Simulation.UI.Models
 {
-    public class SettingsModel
+    public class Settings
     {
         public IEnumerable<IScoreAlgorythm> ScoreAlgorythms { get; set; }
 
-        public TopProviderSettings TopProviderSettings { get; set; }
-
-        
+        public ItemType ItemType { get; set; }
 
     }
 }

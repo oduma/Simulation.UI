@@ -26,6 +26,11 @@ namespace Simulation.UI
                 "{controller}/{id}/{action}", // URL with parameters
                 new { controller = "Home", id = UrlParameter.Optional, action = "Index" } // Parameter defaults
             );
+            routes.MapRoute(
+                "Auto", // Route name
+                "{controller}/{action}", // URL with parameters
+                new { controller = "Auto", action = "Index" } // Parameter defaults
+            );
 
         }
 

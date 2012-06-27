@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>11</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Artist</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>11</NumberOfPlays>
+      <ItemName>Latin Quarter</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Kyoto Jazz Massive</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>This Mortal Coil</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Captain Beefheart &amp; His Magic Band</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Cocteau Twins</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Suede</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>KOJI1200</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>John Cooper Clarke</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Underworld</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>NuSpirit Helsinki</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

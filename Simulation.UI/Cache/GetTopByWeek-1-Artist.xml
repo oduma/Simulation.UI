@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>1</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Artist</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>37</NumberOfPlays>
+      <ItemName>PJ Harvey</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>14</NumberOfPlays>
+      <ItemName>Echo &amp; the Bunnymen</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>5</NumberOfPlays>
+      <ItemName>The Jesus and Mary Chain</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Suede</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>The Clash</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Sigur Rós</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Queen</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Fleetwood Mac</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Bobby Womack</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Gorillaz</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

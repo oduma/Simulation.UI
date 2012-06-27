@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sciendo.Core.Providers;
+using System.Configuration;
 
 namespace Simulation.DataProviders.BuiltIn
 {
@@ -57,6 +58,13 @@ namespace Simulation.DataProviders.BuiltIn
         public bool InUse
         {
             get;set;
+        }
+
+
+        public string ClientSideAlgorythm
+        {
+            get { return ConfigurationManager.AppSettings["DefaultAlgorythmF1ClientSide"].ToString(); }
+
         }
     }
 }

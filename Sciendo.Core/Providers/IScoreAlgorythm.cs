@@ -17,5 +17,7 @@ namespace Sciendo.Core.Providers
 
         bool InUse { get; set; }
 
+        string ClientSideAlgorythm { get; }
+
     }
 }

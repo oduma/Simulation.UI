@@ -25,7 +25,7 @@ namespace Simulation.UI.Models
 
         public IScoreAlgorythm CurrentAlgorythm { get; set; }
 
-        public SettingsModel Settings { get; set; }
+        public Settings Settings { get; set; }
 
     }
 }

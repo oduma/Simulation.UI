@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>5</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Artist</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>7</NumberOfPlays>
+      <ItemName>Chris De Burgh</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>7</NumberOfPlays>
+      <ItemName>The Chemical Brothers</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>5</NumberOfPlays>
+      <ItemName>Cake</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Buena Vista Social Club</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Dar Williams</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>4</NumberOfPlays>
+      <ItemName>Cast</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>The Beatles</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>David Bowie</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>3</NumberOfPlays>
+      <ItemName>Bruce Springsteen</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Deep Purple</ItemName>
+      <ItemType>Artist</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

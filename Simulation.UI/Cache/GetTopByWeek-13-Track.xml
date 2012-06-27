@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>13</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>U2 - Starring At The Sun</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Marvin Gaye - Whats the Matter with You Baby</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Ray Charles - Let's Go Get Stoned</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Fun Lovin' Criminals - King Of New York</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Laurie Anderson - Born, Never Asked</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Gorillaz - El Mañana</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Sigur Rós - Myrkur [Recycled Dirty-bix] [Mix]</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Psychedelic Furs - Heaven</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Psychedelic Furs - The Ghost In You</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Moody Blues - Water</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

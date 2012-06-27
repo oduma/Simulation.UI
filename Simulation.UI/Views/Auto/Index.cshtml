@@ -1,0 +1,52 @@
+﻿@model Simulation.UI.Models.AutoVoteSetupModel
+
+@{
+    ViewBag.Title = "Vote Massively";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header
+{
+        <link href="@Url.Content("~/Content/Grids/Css/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Content/Grids/Scripts/grid.locale-en.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Content/Grids/Scripts/jquery.jqGrid.min.js")" type="text/javascript"></script>
+        @foreach (var clientSideAlgorythm in Model.ClientSideAlgorythms)
+        {
+            <script src="@Url.Content(clientSideAlgorythm)" type="text/javascript"></script>
+        }
+        <script src="@Url.Content("~/Scripts/Custom/AutoVote.js")" type="text/javascript"></script>
+
+}
+
+@section TopOfPage
+{
+    <div id="voteForArtist">Vote for Artist using:
+    <select id="rulesSelectorArtist">
+        @foreach (var alg in Model.SettingsCollection.First(s=>s.ItemType==Sciendo.Core.Providers.DataTypes.ItemType.Artist).ScoreAlgorythms)
+        {
+            <option value="@alg.Name" selected="@alg.InUse">@alg.Description</option> 
+        }
+    </select>
+    </div>
+    <div id="voteForTrack">Vote for Track using:
+    <select id="rulesSelectorTrack">
+        @foreach (var alg in Model.SettingsCollection.First(s=>s.ItemType==Sciendo.Core.Providers.DataTypes.ItemType.Track).ScoreAlgorythms)
+        {
+            <option value="@alg.Name" selected="@alg.InUse">@alg.Description</option> 
+        }
+    </select>
+    </div>
+    <div>
+        <input type="button" id="vote" value="Vote Now" />
+    </div>
+
+}
+<div id="messages"></div>
+<div id="totals" class="totals">
+Total
+<table id="totalArtistsList"></table>
+<div id="totalArtistspager"></div>
+<table id="totalTracksList"></table>
+<div id="totalTrackspager"></div>
+
+</div>

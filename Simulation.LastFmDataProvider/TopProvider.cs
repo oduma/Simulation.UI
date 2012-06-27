@@ -66,22 +66,29 @@ namespace Simulation.LastFmDataProvider
 
         private WeeklyTop GetTopByWeekForArtists(Week week, int topLength)
         {
-            return new WeeklyTop
-                {
-                    WeekNo = week.WeekNo,
-                    TopProcessed = week.TopProcessed,
-                    ItemType = ItemType.Artist,
-                    TopItems = Utility.Deserialize<LfmGetChartArtistsResponse>(
-                        HttpHelper.Get(@"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyartistchart" +
-                            @"&user=scentmaster&from=" +
-                            week.StartingFrom.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
-                            "&to=" +
-                            week.EndingIn.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
-                            "&api_key=" + ApiKey))
-                                .Artists
-                                .TransformToTopItems(topLength)
-                };
-
+            try
+            {
+                return new WeeklyTop
+                    {
+                        WeekNo = week.WeekNo,
+                        TopProcessed = week.TopProcessed,
+                        ItemType = ItemType.Artist,
+                        TopItems = Utility.Deserialize<LfmGetChartArtistsResponse>(
+                            HttpHelper.Get(@"http://ws.audioscrobbler.com/2.0/?method=user.getweeklyartistchart" +
+                                @"&user=scentmaster&from=" +
+                                week.StartingFrom.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
+                                "&to=" +
+                                week.EndingIn.Subtract(new DateTime(1970, 1, 1)).TotalSeconds.ToString() +
+                                "&api_key=" + ApiKey))
+                                    .Artists
+                                    .TransformToTopItems(topLength)
+                    };
+            }
+            catch (Exception ex)
+            {
+                //Should log
+                return null;
+            }
         }
 
         public static string ApiKey { get { return "5e625305596ba928b8d8664bd2a95b08"; } }
