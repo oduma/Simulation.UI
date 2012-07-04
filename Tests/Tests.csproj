@@ -86,11 +86,17 @@
     <Content Include="Data\getweeklychartsok.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="UITests\jquery-1.5.1.min.js" />
-    <Content Include="UITests\MyProject.js" />
-    <Content Include="UITests\MyTests.js" />
-    <Content Include="UITests\qunit.css" />
-    <Content Include="UITests\qunit.js" />
+    <Content Include="UITests\AutoVoteTests.htm" />
+    <Content Include="UITests\autovote\generictests.js" />
+    <Content Include="UITests\autovote\iocplugin.js" />
+    <Content Include="UITests\autovote\iocplugintests.js" />
+    <Content Include="UITests\example\MyProject.js" />
+    <Content Include="UITests\example\MyTests.js" />
+    <Content Include="UITests\IOCPluginTests.htm" />
+    <Content Include="UITests\libs\jquery.mockjax.js" />
+    <Content Include="UITests\libs\qunit.css" />
+    <Content Include="UITests\libs\qunit.js" />
+    <Content Include="UITests\libs\qunit.mock.js" />
     <Content Include="UITests\QunitTest.htm" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
