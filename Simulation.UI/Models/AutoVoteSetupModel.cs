@@ -10,7 +10,5 @@ namespace Simulation.UI.Models
     public class AutoVoteSetupModel
     {
         public IEnumerable<Settings> SettingsCollection { get; set; }
-
-        public List<string> ClientSideAlgorythms { get { return SettingsCollection.SelectMany(s => s.ScoreAlgorythms).Select(a => a.ClientSideAlgorythm).Distinct().ToList(); } }
     }
 }

@@ -1,14 +1,13 @@
 ﻿ScoreAlgorythmType = function () { };
 ScoreAlgorythmType.prototype = {
     name: "",
-    inUse:"",
-    algorythm: function () {  }
+    algorythm: function () { }
 };
 
 ScoreData = function () { };
 ScoreData.prototype = {
-    rank:0,
-    score:0
+    rank: 0,
+    score: 0
 };
 
 (function ($) {
@@ -17,24 +16,8 @@ ScoreData.prototype = {
             return this.each(function () {
                 var currentSelection = $(this);
                 if (!currentSelection.data(this.id)) {
-                    currentSelection.data(this.id, options.algorythms);
-                    //Add the event if selection is changed to set the inUse flag
-                    $(this).bind('change.' + this.id, methods.selectAlgorythm);
+                    currentSelection.data(this.id, options);
                 }
-            });
-        },
-        destroy: function () {
-
-            return this.each(function () {
-                $(this).unbind('.' + this.id);
-            })
-        },
-        selectAlgorythm: function (e) {
-            var selectedOption = $("#" + this.id + " option:selected").val();
-            $.each($(this).data(this.id), function (i, alg) {
-                alg.inUse = false;
-                if (alg.name === selectedOption)
-                    alg.inUse = true;
             });
         },
         run: function (scoreData) {
@@ -42,8 +25,9 @@ ScoreData.prototype = {
                 var currentSelection = $(this);
                 if (!currentSelection.data(this.id))
                     $.error('algSelector not initialized');
-                $.each(currentSelection.data(this.id),function(i, alg){
-                    if(alg.inUse)
+                var selectedName = $("#" + this.id + " option:selected").val();
+                $.each(currentSelection.data(this.id), function (i, alg) {
+                    if (alg.name === selectedName)
                         alg.algorythm(scoreData);
                 });
             });

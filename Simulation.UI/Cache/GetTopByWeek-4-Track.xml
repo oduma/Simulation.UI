@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>4</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>The Brand New Heavies - Let's Do It Again</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Blondie - Night Wind Sent</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>AC/DC - For Those About to Rock (Live)</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Anda Adam - RaggaStylee</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Boogaloo Joe Jones - Brown Bag</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Bobbie Gentry - I'll Never Fall in Love Again</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Al Jarreau - After All</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Brand New Heavies - Mind Trips</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Bob Dylan - the times they are achanging</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Antarhes - Voodoo Dream</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

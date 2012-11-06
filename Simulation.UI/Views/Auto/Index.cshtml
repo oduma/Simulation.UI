@@ -10,10 +10,11 @@
         <link href="@Url.Content("~/Content/Grids/Css/ui.jqgrid.css")" rel="stylesheet" type="text/css" />
         <script src="@Url.Content("~/Content/Grids/Scripts/grid.locale-en.js")" type="text/javascript"></script>
         <script src="@Url.Content("~/Content/Grids/Scripts/jquery.jqGrid.min.js")" type="text/javascript"></script>
-        @foreach (var clientSideAlgorythm in Model.ClientSideAlgorythms)
-        {
-            <script src="@Url.Content(clientSideAlgorythm)" type="text/javascript"></script>
-        }
+        <script type="text/javascript">
+            var clientSideAlgorythms=[];
+        </script>
+        <script src="@Url.Content("~/Scripts/Custom/CSA/BuiltinAlgs.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/Custom/jquery.simulation.algSelector.js")" type="text/javascript"></script>
         <script src="@Url.Content("~/Scripts/Custom/AutoVote.js")" type="text/javascript"></script>
 
 }

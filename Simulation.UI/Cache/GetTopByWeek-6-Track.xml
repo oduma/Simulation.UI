@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>6</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Paloma Faith - New York</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Zap Mama - Wadidyusay? (feat. Scratch)</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Portishead - Biscuit</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Frank Sinatra - Theme from New York, New York</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Chuck Berry - My Ding-A-Ling</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Deniece Williams - Free</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Depeche Mode - I Feel Loved</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Olivia Newton-John - Xanadu</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Florence + the Machine - Howl</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Portishead - It Could Be Sweet</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

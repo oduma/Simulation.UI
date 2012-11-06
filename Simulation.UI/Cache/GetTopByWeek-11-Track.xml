@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>11</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Cocteau Twins - Little Spacey</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Mory Kanté - Yeke Yeke (Hard Floor mix)</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>This Mortal Coil - Song to the Siren</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Boozoo Bajou - Keep Going</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>John Cooper-Clarke - Reader's Wives</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Me And You - Last Night</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Manu Chao - Bongo Bong</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>daniel iancu - Ofiterul Radu</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>The Clash - I fought tThe law</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Nina Simone - I Put A Spell On You</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

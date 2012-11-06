@@ -126,6 +126,7 @@
     <Content Include="Scripts\Custom\AutoVote.js" />
     <Content Include="Scripts\Custom\CSA\BuiltInAlgs.js" />
     <Content Include="Scripts\Custom\customscript.js" />
+    <Content Include="Scripts\Custom\jquery.simulation.algSelector.js" />
     <Content Include="Scripts\Custom\Settings.js" />
     <Content Include="Scripts\Custom\WeekSelection.js" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<WeeklyTop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <WeekNo>7</WeekNo>
+  <TopProcessed>false</TopProcessed>
+  <ItemType>Track</ItemType>
+  <TopItems>
+    <TopItem>
+      <Rank>1</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Leonard Cohen - Anyhow</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>2</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Leonard Cohen - Amen</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>3</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Madonna - Secret</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>4</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Leonard Cohen - Darkness</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>5</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Leonard Cohen - Show Me The Place</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>6</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Sarah Vaughan - Peter Gunn (Max Sedgley Remix)</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>7</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Electric Light Orchestra - Last Train To London</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>8</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>Florence + the Machine - You've Got The Love</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>9</Rank>
+      <NumberOfPlays>2</NumberOfPlays>
+      <ItemName>The Psychedelic Furs - Pretty In Pink</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+    <TopItem>
+      <Rank>10</Rank>
+      <NumberOfPlays>1</NumberOfPlays>
+      <ItemName>Ween - The HIV Song</ItemName>
+      <ItemType>Track</ItemType>
+      <Score>0</Score>
+      <EntryWeek>0</EntryWeek>
+    </TopItem>
+  </TopItems>
+</WeeklyTop>

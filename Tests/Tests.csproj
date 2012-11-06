@@ -88,7 +88,7 @@
     </Content>
     <Content Include="UITests\AutoVoteTests.htm" />
     <Content Include="UITests\autovote\generictests.js" />
-    <Content Include="UITests\autovote\iocplugin.js" />
+    <Content Include="UITests\autovote\jquery.simulation.algSelector.js" />
     <Content Include="UITests\autovote\iocplugintests.js" />
     <Content Include="UITests\example\MyProject.js" />
     <Content Include="UITests\example\MyTests.js" />

@@ -51,11 +51,5 @@ namespace Simulation.DataProviders.BuiltIn
             get;
             set;
         }
-
-
-        public string ClientSideAlgorythm
-        {
-            get { return ConfigurationManager.AppSettings["DefaultAlgorythm123ClientSide"].ToString(); }
-        }
     }
 }
